@@ -1,0 +1,180 @@
+html {
+
+	display: block;
+
+}
+
+
+body {
+
+	box-sizing: content-box;
+	width: 100%;
+	padding: 0;
+    margin: 0;
+    border:0;
+    font-size: 14px;
+    font-family: 'Advent Pro', sans-serif;
+    overflow-y: scroll;
+}
+
+
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    
+   	display: inline-block;
+    width: 100%;
+
+}
+
+a {
+	text-decoration: none;
+	display: block;
+	margin: auto;
+}
+
+li {
+	
+	float: left;
+	margin: auto;
+}
+
+li a {
+    display: block;
+    padding:0 15px 0 15px;
+    text-align: center;
+    color: white;
+    text-decoration: none;
+}
+
+li a:hover {
+    background-image: radial-gradient(rgba(0, 0, 0, 1) 1%, rgba(157, 20, 94, 0.01)99% );
+    color: gold;
+	
+}
+
+a.home {
+
+	font-size: 18px;
+	border-right: 1px #d9d9d9 solid;
+
+
+}
+li.panier {
+
+	border-left: 1px #d9d9d9 solid;
+	float: right;
+	line-height: 38px;
+	height: 50px;
+	display: flex;
+	align-items: center;
+
+}
+
+
+img.basket {
+	margin: auto;
+	display: flex;
+}
+	
+a.moncompte {
+	
+	color: white;
+	float: right;
+	line-height: 30px;
+	margin-right: 10px;
+	
+}
+a.moncompte:hover {
+	color: gold;
+}
+
+
+#bandeau {
+	box-sizing: border-box;
+	margin: 0;
+	padding: 0 10px 0 10px;
+	width: 100%;
+	background-color: black;
+	height: 30px;
+}
+
+#logo {
+	height: 30px;
+	width: 60px;
+}
+
+#navbar {
+	margin: 0;
+	width: 100%;
+	line-height: 50px;
+	height: 50px;
+	background: linear-gradient( #000000 , #9d145e 50% , #000000 100% );
+	display: block;
+	float: right;
+
+	
+}
+
+#searchbar {
+	width: auto;
+	height: auto;
+	padding-right: 10px;
+	float: right;
+
+}
+
+#menu li ul {
+	border-radius: 0 0 10px 10px;
+	border: 1px #d9d9d9 solid;
+	border-top: none;
+
+}
+
+#menu ul{
+	position:absolute;
+	z-index: 1000;
+	max-height:0;
+	max-width: 120px;
+	right: 0;
+	overflow: hidden;
+	transition: .3s all .05s;
+	display: block;
+	background: linear-gradient( #000000 , #9d145e 50% , #000000 100% );
+}
+
+#menu li:hover ul{
+	max-height:800px;
+}
+
+
+#menu li:hover li a{
+	color:#ffffff;
+
+}
+
+
+#menu li ul a:hover{
+
+ color: gold;
+
+}
+
+#menu li ul li a {
+	
+	margin: auto;
+	min-width: 90px;
+}
+
+
+
+.plateforme {
+	left: 63px;
+}
+
+.genre {
+	left: 160px;
+
+}
+
