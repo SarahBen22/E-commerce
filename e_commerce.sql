@@ -25,11 +25,10 @@ CREATE TABLE profil_client(
 #------------------------------------------------------------
 
 CREATE TABLE inscription(
-        id               Int  Auto_increment  NOT NULL ,
-        pseudo           Varchar (50) NOT NULL ,
-        nom              Longtext NOT NULL ,
-        mot_de_passe     Varchar (50) NOT NULL ,
-        confirmation_mdp Varchar (50) NOT NULL
+        id           Int  Auto_increment  NOT NULL ,
+        pseudo       Varchar (50) NOT NULL ,
+        nom          Longtext NOT NULL ,
+        mot_de_passe Varchar (50) NOT NULL
 	,CONSTRAINT inscription_PK PRIMARY KEY (id)
 )ENGINE=InnoDB;
 
@@ -74,6 +73,7 @@ CREATE TABLE produits(
         id_pegi         Int NOT NULL ,
         id_jeux         Int NOT NULL ,
         annee_de_sortie Year NOT NULL ,
+        prix            Float NOT NULL ,
         id_PEGI_limiter Int NOT NULL
 	,CONSTRAINT produits_PK PRIMARY KEY (id)
 
@@ -124,7 +124,8 @@ CREATE TABLE commandes(
 CREATE TABLE panier(
         id          Int  Auto_increment  NOT NULL ,
         id_produit  Int NOT NULL ,
-        id_commande Int NOT NULL
+        id_commande Int NOT NULL ,
+        quantites   Int NOT NULL
 	,CONSTRAINT panier_PK PRIMARY KEY (id)
 )ENGINE=InnoDB;
 
