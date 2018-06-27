@@ -11,5 +11,5 @@ Confirmation du mot de passe : <input type="password" name="mdp_confirm" value="
 <input type="submit" name="inscription" value="Inscription">
 </form>
 <?php
-if (isset($erreur)) echo '<br />',$erreur;// != différent
+if (isset($erreur)) echo '<br />',$erreur;// 
 ?>
