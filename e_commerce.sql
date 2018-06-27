@@ -15,21 +15,10 @@ CREATE TABLE profil_client(
         date_de_naissance Datetime NOT NULL ,
         genre             Int NOT NULL ,
         adresse_postale   Varchar (50) NOT NULL ,
-        telephone         Varchar (20) NOT NULL
+        telephone         Varchar (20) NOT NULL ,
+        pseudo            Varchar (50) NOT NULL ,
+        mdp               Varchar (50) NOT NULL
 	,CONSTRAINT profil_client_PK PRIMARY KEY (id)
-)ENGINE=InnoDB;
-
-
-#------------------------------------------------------------
-# Table: inscription
-#------------------------------------------------------------
-
-CREATE TABLE inscription(
-        id           Int  Auto_increment  NOT NULL ,
-        pseudo       Varchar (50) NOT NULL ,
-        nom          Longtext NOT NULL ,
-        mot_de_passe Varchar (50) NOT NULL
-	,CONSTRAINT inscription_PK PRIMARY KEY (id)
 )ENGINE=InnoDB;
 
 
@@ -73,7 +62,7 @@ CREATE TABLE produits(
         id_pegi         Int NOT NULL ,
         id_jeux         Int NOT NULL ,
         annee_de_sortie Year NOT NULL ,
-        prix            Float NOT NULL ,
+        stock           Int NOT NULL ,
         id_PEGI_limiter Int NOT NULL
 	,CONSTRAINT produits_PK PRIMARY KEY (id)
 
@@ -124,8 +113,7 @@ CREATE TABLE commandes(
 CREATE TABLE panier(
         id          Int  Auto_increment  NOT NULL ,
         id_produit  Int NOT NULL ,
-        id_commande Int NOT NULL ,
-        quantites   Int NOT NULL
+        id_commande Int NOT NULL
 	,CONSTRAINT panier_PK PRIMARY KEY (id)
 )ENGINE=InnoDB;
 
