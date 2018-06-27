@@ -3,6 +3,7 @@
   <head>
     <meta charset="utf-8">
     <link rel="stylesheet" href="deco.css">
+    
     <script src="jquery-3.3.1.min.js"></script>
     <title>Site e-commerce</title>
   </head>
