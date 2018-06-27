@@ -14,5 +14,5 @@ require_once "views/navbar.php";
 
 </form>
 <?php
-if (isset($erreur)) echo '<br />',$erreur;// != différent
+if (isset($erreur)) echo '<br />',$erreur;// 
 ?>
