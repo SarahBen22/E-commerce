@@ -106,15 +106,6 @@ class ProduitsModel extends Model {
 		}
 
 
-
-
-
-
-
-
-
-
-
 }
 
 
