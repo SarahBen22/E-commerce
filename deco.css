@@ -177,4 +177,15 @@ a.moncompte:hover {
 	left: 160px;
 
 }
+.forme{
+	text-align: center;
+	margin-top: 8%;
+	border: 1px solid rgba(233, 197, 215, 1);
+	width: 40%;
+	margin-right:auto;
+	margin-left: auto;
+	background-color:rgba(233, 197, 215, 0.4);
+	border-radius: 10%;
+
+}
 
