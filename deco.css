@@ -1,3 +1,10 @@
+@font-face {
+  font-family: 'ChopinScript';
+  src: url('font/ChopinScript.otf'); /* IE9 Compat Modes /
+  src: url('font/ChopinScript.otf') format('otf'), / Super Modern Browsers */
+}
+
+
 html {
 
 	display: block;
@@ -11,11 +18,16 @@ body {
 	width: 100%;
 	padding: 0;
     margin: 0;
-    border:0;
+    border: 0;
     font-size: 14px;
     font-family: 'Advent Pro', sans-serif;
     overflow-y: scroll;
 }
+
+
+
+/*---------------------------NAVBAR----------------------------*/
+
 
 
 ul {
@@ -127,8 +139,7 @@ a.moncompte:hover {
 
 #menu li ul {
 	border-radius: 0 0 10px 10px;
-	border: 1px #d9d9d9 solid;
-	border-top: none;
+
 
 }
 
@@ -142,20 +153,28 @@ a.moncompte:hover {
 	transition: .3s all .05s;
 	display: block;
 	background: linear-gradient( #000000 , #9d145e 50% , #000000 100% );
+
 }
 
 #menu li:hover ul{
 	max-height:800px;
+	border: 1px #d9d9d9 solid;
+	border-top: none;
+	box-sizing: content-box;
+
+
+
 }
 
 
 #menu li:hover li a{
 	color:#ffffff;
 
+
 }
 
 
-#menu li ul a:hover{
+#menu li ul a:hover {
 
  color: gold;
 
@@ -171,22 +190,44 @@ a.moncompte:hover {
 
 .plateforme {
 	left: 63px;
+
 }
 
 .genre {
 	left: 160px;
 
 }
-.forme{
-	text-align: center;
-	margin-top: 8%;
-	border: 1px solid rgba(233, 197, 215, 1);
-	width: 40%;
-	margin-right:auto;
-	margin-left: auto;
-	background-color:rgba(233, 197, 215, 0.4);
-	border-radius: 10%;
 
+
+/*----------------------------------------OLD-SLIDESHOW--------------------------------------*/
+
+
+/* Slideshow container */
+.slideshow-container {
+  max-width: 100%;
+  height: 500px;
+  position: relative;
+  margin: auto;
+  margin-top: 50px;
+  box-sizing: border-box;
+
+
+}
+
+/* Hide the images by default */
+.mySlides {
+    display: none;
+
+}
+
+.centrée {
+	text-align: center;
+}
+
+#slidepre {
+	left: 50px;
+	width: 300px;
+	height: 200px;
 }
 
 
