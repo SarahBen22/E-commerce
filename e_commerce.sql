@@ -75,17 +75,8 @@ CREATE TABLE produits(
 #------------------------------------------------------------
 
 CREATE TABLE type_de_jeux(
-        id         Int  Auto_increment  NOT NULL ,
-        aventure   Varchar (50) NOT NULL ,
-        rpg        Varchar (50) NOT NULL ,
-        course     Varchar (50) NOT NULL ,
-        horreur    Varchar (50) NOT NULL ,
-        education  Varchar (50) NOT NULL ,
-        combat     Varchar (50) NOT NULL ,
-        sport      Varchar (50) NOT NULL ,
-        strategie  Varchar (50) NOT NULL ,
-        puzzle     Varchar (50) NOT NULL ,
-        simulation Varchar (50) NOT NULL
+        id  Int  Auto_increment  NOT NULL ,
+        nom Varchar (50) NOT NULL
 	,CONSTRAINT type_de_jeux_PK PRIMARY KEY (id)
 )ENGINE=InnoDB;
 
