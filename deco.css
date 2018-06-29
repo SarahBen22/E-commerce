@@ -1,6 +1,6 @@
 @font-face {
-  font-family: 'ChopinScript';
-  src: url('font/ChopinScript.otf'); /* IE9 Compat Modes /
+  font-family: 'big_noodle_titling';
+  src: url('./Ecritures/big_noodle_titling.ttf'); /* IE9 Compat Modes /
   src: url('font/ChopinScript.otf') format('otf'), / Super Modern Browsers */
 }
 
@@ -9,6 +9,7 @@ html {
 box-sizing: border-box;
 	display: block;
 overflow-y: scroll;
+
 }
 
 
@@ -20,7 +21,7 @@ body {
     margin: 0;
     border: 0;
     font-size: 14px;
-    font-family: 'Advent Pro', sans-serif;
+    font-family: 'big_noodle_titling';
     
 }
 
@@ -28,7 +29,13 @@ body {
 
 /*---------------------------NAVBAR----------------------------*/
 
+button, input{
+  font-family: 'big_noodle_titling';
+}
 
+input {
+  width: 200px;
+}
 
 ul {
     list-style-type: none;
@@ -237,7 +244,6 @@ a.moncompte:hover {
 
 
 
-
 .platformlink {
  margin-top: 50px;
  width: 100%;
@@ -263,7 +269,7 @@ a.moncompte:hover {
   width: 150px;
   height: 150px;
   
-
+  color: white;
   margin: auto;
   border-radius: 3px;
   border: solid 1px #9d145e;
@@ -276,7 +282,17 @@ a.moncompte:hover {
    display: inline-block;
 }
 
+.platformlink img {
+  border-radius: 2px;
+  margin-bottom: 5px;
+ 
+}
 
+.platformlink a {
+  margin: 0;
+  padding: 0;
+
+}
 /*--------------------------forme inscription---------------------------*/
 
 
@@ -293,7 +309,7 @@ a.moncompte:hover {
 }
 
 
-/*page d'erreur*/
+/*----------------------------page d'erreur-----------------------------*/
 
 .erreur{
 
