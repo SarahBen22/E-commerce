@@ -29,7 +29,7 @@ class profil_clientModel extends Model {
 
 
    if (empty($data)) {// si rien ds le 1
-      $sql = 'INSERT INTO profil_client VALUES(0, "","","","","","","","'.$db->quote($pseudo).'", "'.$db->quote($mdp).'")';
+      $sql = 'INSERT INTO profil_client VALUES(0, "","","","1950-01-01",1,"","","'.$db->quote($pseudo).'", "'.$db->quote($mdp).'")';
       $req= $db->prepare($sql) or die('Erreur SQL !'.$sql.'<br />'.mysql_error());
        $req->execute();
 

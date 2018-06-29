@@ -71,48 +71,39 @@ class ProduitsModel extends Model {
 		    }
 		}
 
-		  public function setTitre( $civilite ){
-		    if(is_string($civilite)){
-		      $this->civilite = $civilite;
+		  public function setTitre( $titre ){
+		    if(is_string($titre)){
+		      $this->titre = $titre;
 		    }
 		}
 
-		  public function setNom( $nom ){
-		    if(is_string($nom)){
-		      $this->nom = $nom;
+		  public function setId_console( $id_console ){
+		    if(is_string($id_console)){
+		      $this->id_console = $id_console;
 		    }
 		}
 
-		  public function setPrenom( $prenom ){
-		    if(is_string($prenom)){
-		      $this->prenom = $prenom;
+		  public function setId_jeux( $id_jeux ){
+		    if(is_string($id_jeux)){
+		      $this->id_jeux = $id_jeux;
 		    }
 		  }
 
-		  public function setDate_de_naissance( $Date_de_naissance){
-		      $this->Date_de_naissance = $Date_de_naissance;
+		  public function setAnnee_de_sortie( $annee_de_sortie){
+		      $this->annee_de_sortie = $annee_de_sortie;
 		}
 
-		  public function setGenre( $genre ){
-		    if(is_int($genre)){
-		      $this->genre = $genre;
+		  public function setStock( $stock ){
+		    if(is_int($stock )){
+		      $this->stock  = $stock ;
 		    }
 		}
 
-		  public function setAdresse_postale( $adresse_postale ){
+		  public function setId_pegi( $id_pegi ){
 		    if(is_string($adresse_postale)){
 		      $this->adresse_postale = $adresse_postale;
 		    }
 		}
-
-
-
-
-
-
-
-
-
 
 
 }
