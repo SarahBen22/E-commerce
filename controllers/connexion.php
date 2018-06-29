@@ -11,14 +11,14 @@ if (isset($_POST['connexion']) && $_POST['connexion'] == 'Connexion') {// isset=
 			}
 			else {
 				$client= new profil_clientModel ();
-				$erreur= $client-> createOne($_POST['pseudo'],$_POST['mdp'],$_POST['prenom'],$_POST['nom'],$_POST['telephone'],$_POST['adresse_postale']);
-
+				$erreur= $client->getByPseudo;
 				if ($erreur==0)
                 $_SESSION['pseudo'] = $_POST['pseudo'];
                 $_SESSION['prenom'] = $_POST['prenom'];
                 $_SESSION['nom'] = $_POST['nom'];
                 $_SESSION['telephone'] = $_POST['telephone'];
                 $_SESSION['adresse_postale'] = $_POST['adresse_postale'];
+								$_SESSION['mail'] = $_POST['mail'];
 			}
 	 }
 	 else {

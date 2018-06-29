@@ -15,11 +15,13 @@ class profil_clientModel extends Model {
   private $telephone;
   private $pseudo;
   private $mdp;
+  private $mail;
 
 
   public function createOne ($pseudo, $mdp){
 
 	$db=parent::connect();
+//  $mdp=openssl_encrypt ($mdp,'aes128', '$2a$10$1qAz2wSx3eDc4rFv5tGb5t',true,2048204820482048);// mdp= mot de passe, aes128_= algorithme de cryptage,true=option, 2048*4= un nombre qui fait 16 chiffres=valeur d'initialisation 
 
    // on recherche si ce login est déjà utilisé par un autre membre
    $sql = 'SELECT * FROM profil_client WHERE pseudo="'.$db->quote($pseudo).'"';
@@ -29,7 +31,7 @@ class profil_clientModel extends Model {
 
 
    if (empty($data)) {// si rien ds le 1
-      $sql = 'INSERT INTO profil_client VALUES(0, "","","","1950-01-01",1,"","","'.$db->quote($pseudo).'", "'.$db->quote($mdp).'")';
+      $sql = 'INSERT INTO profil_client VALUES(0, "","","","1950-01-01",1,"","","'.$db->quote($pseudo).'", "'.$db->quote($mdp).'", "'.$db->quote($mail).'")';
       $req= $db->prepare($sql) or die('Erreur SQL !'.$sql.'<br />'.mysql_error());
        $req->execute();
 
@@ -65,7 +67,7 @@ class profil_clientModel extends Model {
   public function telephone() { return $this->telephone; }
   public function pseudo() { return $this->pseudo; }
   public function mdp() { return $this->mdp; }
-
+  public function mail() { return $this->mail; }
 
 
 
@@ -128,6 +130,99 @@ class profil_clientModel extends Model {
         $this->mdp = $mdp;
           }
 }
+
+    public function setMail( $mail ){
+  if(is_string($mail)){
+    $this->mail = $mail;
+      }
+}
+
+
+//UPDATE
+	public function update(Profil_clientModel $client){
+
+		$db=parent::connect();
+
+		// On teste d'abord si l'utilisateur existe déjà ou si il est vide
+		if($this->exists($client->nom_client())){
+			return '<p class="red">Le nom d\'utilisateur '.$client->nom_client().' est déjà utilisé.</p>';
+		}
+		elseif($client->nom_client() == ''){
+			return '<p class="red">Le nom d\'utilisateur est vide.</p>';
+		}
+
+		$sql= "UPDATE client SET civilite = :civilite, nom = :nom, prenom = :prenom, date_de_naissance = : date_de_naissance, genre = :genre, adresse_postale = :adresse_postale , telephone = :telephone, pseudo = :pseudo, mdp= :mdp, mail = :mail WHERE id=".$client->id();
+		$query= $db -> prepare ($sql);
+		$query->bindValue(':nom_client', $client->nom_client());
+		$query->bindValue(':mot_de_passe', $client->mot_de_passe());
+		$query->bindValue(':civilite', $client->civilite());
+		$query->bindValue(':prenom', $client->prenom());
+		$query->bindValue(':nom', $client->nom());
+		$query->bindValue(':adresse', $client->adresse());
+		$query->bindValue(':telephone', $client->telephone());
+		$query->bindValue(':email', $client->email());
+
+		$result = $query -> execute ();
+
+		if($result){	// Si $result est vrai alors la requête c'est bien déroulé
+			return '<p class="green">L\'utilisateur '.$client->nom_client().' à bien été modifié.</p>';
+		}
+		else{
+			return '<p class="red">Echec de la modification de l\'utilisateur '.$client->nom_client().'</p>';
+		}
+	}
+
+
+
+
+  // DELETE
+  	public function delete($data){
+
+  		$db=parent::connect();
+
+  		if(is_int($data)){
+  			$sql= "DELETE FROM client WHERE id = ".$data;
+  			$query= $db -> prepare ($sql);
+  			$query -> execute ();
+
+  			return '<p class="green">L\'utilisateur à bien été supprimé.</p>';
+  		}
+
+  		return '<p class="red">Echec de la suppression de l\'utilisateur.</p>';
+  	}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
