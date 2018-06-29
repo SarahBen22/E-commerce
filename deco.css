@@ -34,6 +34,9 @@ ul {
     list-style-type: none;
     margin: 0;
     padding: 0;
+
+
+
    	display: inline-block;
     width: 100%;
 
@@ -46,7 +49,7 @@ a {
 }
 
 li {
-	
+
 	float: left;
 	margin: auto;
 }
@@ -62,7 +65,7 @@ li a {
 li a:hover {
     background-image: radial-gradient(rgba(0, 0, 0, 1) 1%, rgba(157, 20, 94, 0.01)99% );
     color: gold;
-	
+
 }
 
 a.home {
@@ -88,14 +91,14 @@ img.basket {
 	margin: auto;
 	display: flex;
 }
-	
+
 a.moncompte {
-	
+
 	color: white;
 	float: right;
 	line-height: 30px;
 	margin-right: 10px;
-	
+
 }
 a.moncompte:hover {
 	color: gold;
@@ -125,7 +128,7 @@ a.moncompte:hover {
 	display: block;
 	float: right;
 
-	
+
 }
 
 #searchbar {
@@ -138,7 +141,7 @@ a.moncompte:hover {
 
 #menu li ul {
 	border-radius: 0 0 10px 10px;
-	
+
 
 }
 
@@ -180,7 +183,7 @@ a.moncompte:hover {
 }
 
 #menu li ul li a {
-	
+
 	margin: auto;
 	min-width: 90px;
 }
@@ -189,7 +192,7 @@ a.moncompte:hover {
 
 .plateforme {
 	left: 63px;
-	
+
 }
 
 .genre {
@@ -212,7 +215,7 @@ a.moncompte:hover {
 
 
 
-  .carousel {
+.carousel {
   	top: 50px;
     margin: 0 auto;
 
@@ -227,8 +230,10 @@ a.moncompte:hover {
     border: white 1px solid;
     box-shadow: 2px 2px 5px  white; 
     border-radius: 3px;
+}
 
-  }
+
+
 
 
 
@@ -286,3 +291,14 @@ a.moncompte:hover {
   border-radius: 10%;
 
 }
+
+
+/*page d'erreur*/
+
+.erreur{
+
+	background-image: url("erreur.jpg");
+	height:100%;
+	width:100%;
+}
+

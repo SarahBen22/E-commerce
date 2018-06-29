@@ -1,6 +1,6 @@
 
 <?php
-require_once "./navbar.php";
+require_once "navbar.php";
 ?>
 
 
@@ -12,8 +12,11 @@ require_once "./navbar.php";
 <link rel="stylesheet" type="text/css" href="../deco.css">
 <link href="https://fonts.googleapis.com/css?family=Advent+Pro" rel="stylesheet">
 
+
 <script src="http://code.jquery.com/jquery-3.3.1.min.js"></script>
 <script type="text/javascript" src="../main.js"></script>	
+
+
 </head>
 <body>
 
@@ -58,12 +61,3 @@ require_once "./navbar.php";
 
 </body>
 </html>
-
-
-
-
-
-
-
-
-
