@@ -12,38 +12,48 @@ require_once "./navbar.php";
 <link rel="stylesheet" type="text/css" href="../deco.css">
 <link href="https://fonts.googleapis.com/css?family=Advent+Pro" rel="stylesheet">
 
-<script type="text/javascript" src="../Jquery/jquery-3.3.1.min.js"></script>
+<script src="http://code.jquery.com/jquery-3.3.1.min.js"></script>
 <script type="text/javascript" src="../main.js"></script>	
 </head>
 <body>
 
 
 
+<div class="homecontainer">
+
+  <div class="carousel">
+    <img class="carouselimg" src="../img/lara.jpg" alt="Image 1" width= "616 px" height="353px" />
+    <img class="carouselimg" src="../img/larac.png" alt="Image 2" width= "616 px" height="353px"/>
+    <img class="carouselimg" src="../img/laracro.jpg" alt="Image 3" width= "616 px" height="353px"/>
+    <img class="carouselimg" src="../img/lara.jpg" alt="Image 4" width= "616 px" height="353px"/>
+    <img class="carouselimg" src="../img/larac.png" alt="Image 5" width= "616 px" height="353px"/>
+  </div>
 
 
-<div class="carousel">
-  <img src="http://placehold.it/600x350/faf345/000000&text=item 1" alt="Image 1" />
-  <img src="http://placehold.it/600x350/ffa345/000000&text=item 2" alt="Image 2" />
-  <img src="http://placehold.it/600x350/ffa3ee/000000&text=item 3" alt="Image 3" />
-  <img src="http://placehold.it/600x350/ffd3ee/000000&text=item 4" alt="Image 4" />
-  <img src="http://placehold.it/600x350/fda30e/000000&text=item 5" alt="Image 5" />
+
+
+<div class="platformlink">
+  <ul>
+  
+  <li> PS4 </li>
+  <li> XBOX ONE </li>
+  <li> PC </li>
+  <li> WII </li>
+
+
+
+  </ul>
+
+
+
 </div>
 
 
 
 
+</div>
 
 
-
-
-
-
-
-
-
-
-
-<script type="text/javascript" src="../main.js"></script>
 
 
 </body>
