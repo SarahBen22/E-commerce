@@ -303,7 +303,7 @@ a.moncompte:hover {
   width: 40%;
   margin-right:auto;
   margin-left: auto;
-  background-color:rgba(233, 197, 215, 0.4);
+  background-color:rgba(233, 197, 215, 0.7);
   border-radius: 10%;
 
 }
@@ -351,3 +351,26 @@ a{
 	text-align: center;
 	color:white;
 }
+
+
+
+/*----------------------------------------CONNEXION--------------------------------------*/
+
+
+#connexion{
+
+
+  background: linear-gradient( #000000 , #202960 50% , #000000 100% );
+  margin-top: 11%;
+  width: 25%;
+  border-radius: 50%;
+	color:rgb( 135,18,81 );
+
+  }
+
+  .msg{
+
+  text-align: center;
+  width: 100%;
+
+  }

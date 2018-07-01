@@ -15,9 +15,7 @@ if (isset($_POST['connexion']) && $_POST['connexion'] == 'Connexion') {// isset=
 				if ($erreur==0)
                 $_SESSION['pseudo'] = $_POST['pseudo'];
                 $_SESSION['prenom'] = $_POST['prenom'];
-                $_SESSION['nom'] = $_POST['nom'];
-                $_SESSION['telephone'] = $_POST['telephone'];
-                $_SESSION['adresse_postale'] = $_POST['adresse_postale'];
+            
 								$_SESSION['mail'] = $_POST['mail'];
 			}
 	 }

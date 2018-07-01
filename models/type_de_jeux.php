@@ -64,6 +64,81 @@ class Type_de_jeuxModel extends Model {
 		    }
 		}
 
+		//UPDATE
+			public function update(Type_de_jeuxModel $type){
+
+				$db=parent::connect();
+
+				// On teste d'abord si l'utilisateur existe déjà ou si il est vide
+				if($this->exists($type->nom())){
+					return '<p class="red">Le type de jeux '.$type->nom().' est déjà utilisé.</p>';
+				}
+				elseif($type->nom() == ''){
+					return '<p class="red">Le type de jeu est vide.</p>';
+				}
+
+				$sql= "UPDATE client SET nom = :nom WHERE id=".$type->id();
+				$query= $db -> prepare ($sql);
+				$query->bindValue(':nom', $type->nom());
+
+
+				$result = $query -> execute ();
+
+				if($result){	// Si $result est vrai alors la requête c'est bien déroulé
+					return '<p class="green">Le type de jeu'.$client->nom().' a bien été modifié.</p>';
+				}
+				else{
+					return '<p class="red">Echec de la modification du type de jeu '.$client->nom().'</p>';
+				}
+			}
+
+
+
+
+		  // DELETE
+		  	public function delete($data){
+
+		  		$db=parent::connect();
+
+		  		if(is_int($data)){
+		  			$sql= "DELETE FROM type_de_jeux WHERE id = ".$data;
+		  			$query= $db -> prepare ($sql);
+		  			$query -> execute ();
+
+		  			return '<p class="green">Le type de jeu a bien été supprimé.</p>';
+		  		}
+
+		  		return '<p class="red">Echec de la suppression du type de jeu.</p>';
+		  	}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 }
 

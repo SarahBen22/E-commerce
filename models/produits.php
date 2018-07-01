@@ -105,6 +105,64 @@ class ProduitsModel extends Model {
 		    }
 		}
 
+		//UPDATE
+			public function update(ProduitsModel $prod){
+
+				$db=parent::connect();
+
+				// On teste d'abord si l'utilisateur existe déjà ou si il est vide
+				if($this->exists($prod->titre())){
+					return '<p class="red">Le\'produit'.$prod->titre().' est déjà enregistré.</p>';
+				}
+				elseif($prod->titre() == ''){
+					return '<p class="red">Le produit n\'a pas été enregistré correctement.</p>';
+				}
+
+				$sql= "UPDATE prod SET titre = :titre, id_console = :id_console, id_jeux = :id_jeux, annee_de_sortie = :annee_de_sortie , stock = :stock, id_pegi = :id_pegi WHERE id=".$prod->id();
+				$query= $db -> prepare ($sql);
+				$query->bindValue(':titre', $prod->titre());
+				$query->bindValue(':id_console', $prod->id_console());
+				$query->bindValue(':id_jeux', $prod->id_jeux());
+				$query->bindValue(':annee_de_sortie', $prod->annee_de_sortie());
+				$query->bindValue(':stock ', $prod->stock());
+				$query->bindValue(':id_pegi', $prod->id_pegi());
+
+
+				$result = $query -> execute ();
+
+				if($result){	// Si $result est vrai alors la requête c'est bien déroulé
+					return '<p class="green">Le\'produit '.$prod->titre().' a bien été modifié.</p>';
+				}
+				else{
+					return '<p class="red">Echec de la modification du \'produit '.$prod->titre().'</p>';
+				}
+			}
+
+
+
+
+		  // DELETE
+		  	public function delete($data){
+
+		  		$db=parent::connect();
+
+		  		if(is_int($data)){
+		  			$sql= "DELETE FROM produits WHERE id = ".$data;
+		  			$query= $db -> prepare ($sql);
+		  			$query -> execute ();
+
+		  			return '<p class="green">Le produit a bien été supprimé.</p>';
+		  		}
+
+		  		return '<p class="red">Echec de la suppression du produit.</p>';
+		  	}
+
+
+
+
+
+
+
 
 }
 

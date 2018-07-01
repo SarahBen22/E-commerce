@@ -2,7 +2,8 @@
 
 	<div id="bandeau">
 		<img id="logo" src="/Site_e-commerce/img/arcade-logo.png">
-		<a class="moncompte" href="mon-compte.asp">Mon Compte</a>
+		
+	echo	<a class="moncompte" href=\"/Site_e-commerce/index.php/profil_client\">Mon Compte</a>
 	</div>
 	<div id="navbar">
 
