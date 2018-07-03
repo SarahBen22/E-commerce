@@ -37,7 +37,7 @@
 		  	<li><a href="about.asp">Mieux Notés</a></li>
 		  	<li><a href="about.asp">Offres Spéciales</a></li>
 		  	<li><a href="about.asp">Goodies</a></li>
-		  	<li class="panier"><a  href="about.asp"><img class="basket" src="../img/cart.png" width="35px" height="35px" ></a></li>
+		  	<li  class="panier"> <a  onclick="toggleForm()" href=""><img class="basket" src="../img/cart.png" width="35px" height="35px" ></a></li>
 		 	<li id="searchbar">
 		  	<form>
 				<input type="search" placeholder="recherche" aria-label="Search" >
@@ -56,9 +56,5 @@
 
 
 
-
-<?php  
-
-?>
 
 
