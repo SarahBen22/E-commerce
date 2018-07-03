@@ -6,5 +6,6 @@ $produits =new ProduitsModel();
 $ProduitsListView= $produits->getAll();
 
 $content = "views/produits.php";
+require_once "views/layout.php";
 
 ?>
