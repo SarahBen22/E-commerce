@@ -267,14 +267,10 @@ form#panier {
     margin: 0 auto;
     width:5%;
     height: 300px;
-<<<<<<< HEAD
     position: relative;
-   
-    
-=======
     display: relative;
 
->>>>>>> 36a84c4e805bdde6d1eab60bea133ef7a8f769a2
+
   }
   .carousel img {
     display: hidden; /* hide images until carousel prepares them */
@@ -303,19 +299,10 @@ form#panier {
 
   text-align: center;
   display: flex;
-<<<<<<< HEAD
   margin: auto ;
   width: 80%;
-
-  
-  
-  
-=======
   margin: auto 10%;
 
-
-
->>>>>>> 36a84c4e805bdde6d1eab60bea133ef7a8f769a2
 }
 
 .platformlink li {
@@ -323,15 +310,10 @@ form#panier {
   float: none;
   width: 150px;
   height: 150px;
-<<<<<<< HEAD
   padding: 0;
-=======
-
->>>>>>> 36a84c4e805bdde6d1eab60bea133ef7a8f769a2
   color: white;
   margin: 0;
   border-radius: 3px;
-  
   box-sizing: content-box;
  
 }
@@ -340,9 +322,7 @@ form#panier {
 
 .platformlink img {
   
-  
   border: solid 1px #9d145e;
-<<<<<<< HEAD
   box-shadow: 2px 2px 5px  #9d145e; 
   border-radius: 3px;
   box-sizing: content-box;
@@ -354,9 +334,8 @@ form#panier {
   width: 150px;
   height: 150px;
   display: flex;
-=======
   box-shadow: 2px 2px 5px  #9d145e;
->>>>>>> 36a84c4e805bdde6d1eab60bea133ef7a8f769a2
+
 
 }
 
@@ -377,7 +356,7 @@ li.col-sm {
   text-align: center;
 }
 
-<<<<<<< HEAD
+
 
 
 /*------------------------------footer---------------------------------*/
@@ -399,12 +378,7 @@ li.col-sm {
   display: flex;
   padding-left: 30px;
  
-=======
-.platformlink img {
-  border-radius: 2px;
-  margin-bottom: 5px;
 
->>>>>>> 36a84c4e805bdde6d1eab60bea133ef7a8f769a2
 }
 
 
