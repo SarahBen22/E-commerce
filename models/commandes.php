@@ -8,10 +8,11 @@ class CommandesModel extends Model {
 		private $num_commande;
 		private $date_de_commande;
 		private $id_client;
+		private $quantite;
 		
 
 
-		public function createOne ($num_commande, $date_de_commande, $id_client){
+		public function createOne ($num_commande, $date_de_commande, $id_client,$quantite){
 
 		$db=parent::connect();
 
@@ -23,7 +24,7 @@ class CommandesModel extends Model {
 
 
 		 if (empty($data)) {// si rien ds le 1
-				$sql = 'INSERT INTO commandes VALUES(0, "'.$db->quote($num_commandes).'","'.$db->quote($date_de_commande).'","'.$db->quote($id_client).'")';
+				$sql = 'INSERT INTO commandes VALUES(0, "'.$db->quote($num_commandes).'","'.$db->quote($date_de_commande).'","'.$db->quote($id_client).'","'.$db->quote($quantite).'")';
 				$req= $db->prepare($sql) or die('Erreur SQL !'.$sql.'<br />'.mysql_error());
 				 $req->execute();
 
@@ -40,7 +41,7 @@ class CommandesModel extends Model {
 
 		$db=parent::connect();
 
-		$sql = "select * from commandes";
+		$sql = "select * from commandes INNER JOIN produits on commandes.quantite = produits.id";
 		$query = $db -> prepare($sql);
 		$query -> execute();
 		$commandesList= $query -> fetchAll();
@@ -52,7 +53,8 @@ class CommandesModel extends Model {
 	  public function id() { return $this->id; }
 	  public function num_commande() { return $this->num_commande; }
 	  public function date_de_commande() { return $this->date_de_commande; }
-	  public function id_client() { return $this->id_client;}
+		public function id_client() { return $this->id_client;}
+		public function quantite() { return $this->quantite;}
 	
 
 		// SETTERS // pour assigner des valeurs aux attributs
@@ -79,7 +81,15 @@ class CommandesModel extends Model {
 		  public function setId_client( $id_client ){
 		    if(is_string($id_client)){
 		      $this->id_client = $id_client;
-		    }
+				}
+				
+			}
+			
+			public function setQuantite( $quantite ){
+		    if(is_int($quantite)){
+		      $this->quantite = $quantite;
+				}
+				
 		  }
 
 
@@ -96,11 +106,12 @@ class CommandesModel extends Model {
 					return '<p class="red">La commande n\'a pas été enregistré correctement.</p>';
 				}
 
-				$sql= "UPDATE comm SET num_commande = :num_commande, date_de_commande = :date_de_commande, id_client = :id_client WHERE id=".$comm->id();
+				$sql= "UPDATE comm SET num_commande = :num_commande, date_de_commande = :date_de_commande, id_client = :id_client, quantite = :quantite WHERE id=".$comm->id();
 				$query= $db -> prepare ($sql);
 				$query->bindValue(':num_commande', $comm->num_commande());
 				$query->bindValue(':date_de_commande', $comm->date_de_commande());
 				$query->bindValue(':id_client', $comm->id_client());
+				$query->bindValue(':quantite', $comm->quantite());
 				
 
 
