@@ -18,7 +18,7 @@
 			<div id="navbar">
 
 				<ul id="menu">
-				  	<li><a class="home" href="default.html">Home</a></li>
+				  	<li><a class="home" href="http://localhost/E-commerce/">Home</a></li>
 
 				  	<li><a href="news.asp">Par Plateforme</a>
 				  		<ul class="plateforme">

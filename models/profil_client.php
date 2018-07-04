@@ -10,28 +10,42 @@ class profil_clientModel extends Model {
 	private $nom;
 	private $prenom;
 	private $date_de_naissance;
-	private $genre;
   private $adresse_postale;
   private $telephone;
   private $pseudo;
   private $mdp;
   private $mail;
+  private $admin;
 
+  // CONSTRUCTEUR //
+      public function __construct (array $donnees){
+          $this->hydrate($donnees);// faire une boucle sur les données
+      }
 
-  public function createOne ($pseudo, $mdp){
+      public function hydrate(array $donnees){
+          foreach($donnees as $key => $value){
+              $method = 'set'.ucfirst($key);//ligne qui appelle tous les setters
+              if(method_exists($this, $method)){
+                  $this->$method($value);
+              }
+          }
+      }
+
+  public function createOne (profil_clientModel $profil_client){
 
 	$db=parent::connect();
-//  $mdp=openssl_encrypt ($mdp,'aes128', '$2a$10$1qAz2wSx3eDc4rFv5tGb5t',true,2048204820482048);// mdp= mot de passe, aes128_= algorithme de cryptage,true=option, 2048*4= un nombre qui fait 16 chiffres=valeur d'initialisation
+ $mdp=openssl_encrypt ($mdp,'aes128', '$2a$10$1qAz2wSx3eDc4rFv5tGb5t',true,2048204820482048);// mdp= mot de passe, aes128_= algorithme de cryptage,true=option, 2048*4= un nombre qui fait 16 chiffres=valeur d'initialisation
 
    // on recherche si ce login est déjà utilisé par un autre membre
-   $sql = 'SELECT * FROM profil_client WHERE pseudo="'.$db->quote($pseudo).'"';
+   $sql = 'SELECT * FROM profil_client WHERE pseudo="'.$db->quote($profil_client->pseudo()).'"';
    $req = $db->prepare($sql) or die('Erreur SQL !<br />'.$sql.'<br />'.mysql_error());// voir s il y a une erreur
    $result=$req->execute();
    $data =$req->fetchAll(); //recup les données
 
 
    if (empty($data)) {// si rien ds le 1
-      $sql = 'INSERT INTO profil_client VALUES(0, "","","","1950-01-01",1,"","","'.$db->quote($pseudo).'", "'.$db->quote($mdp).'", "'.$db->quote($mail).'")';
+      $sql = 'INSERT INTO profil_client VALUES(0,"mme" ,"'.$db->quote($profil_client->nom()).'","'.$db->quote($profil_client->prenom()).'","1950-01-01","'.$db->quote($profil_client->adresse_postale()).'","'.$db->quote($profil_client->telephone()).'","'.$db->quote($profil_client->pseudo()).'", "'.$db->quote($profil_client->mdp()).'",
+      "'.$db->quote($profil_client->mail()).'","'. $profil_client->admin().'")';
       $req= $db->prepare($sql) or die('Erreur SQL !'.$sql.'<br />'.mysql_error());
        $req->execute();
 
@@ -62,13 +76,12 @@ class profil_clientModel extends Model {
   public function nom() { return $this->nom; }
   public function prenom() { return $this->prenom; }
   public function date_de_naissance() { return $this->date_de_naissance;}
-  public function genre() { return $this->genre; }
   public function adresse_postale() { return $this->adresse_postale; }
   public function telephone() { return $this->telephone; }
   public function pseudo() { return $this->pseudo; }
   public function mdp() { return $this->mdp; }
   public function mail() { return $this->mail; }
-
+  public function admin() { return $this->admin; }
 
 
 
@@ -103,11 +116,6 @@ class profil_clientModel extends Model {
       $this->Date_de_naissance = $Date_de_naissance;
 }
 
-  public function setGenre( $genre ){
-    if(is_int($genre)){
-      $this->genre = $genre;
-    }
-}
 
   public function setAdresse_postale( $adresse_postale ){
     if(is_string($adresse_postale)){
@@ -137,7 +145,10 @@ class profil_clientModel extends Model {
       }
 }
 
+  public function setAdmin ($admin ){
+  $this->admin = $admin;
 
+}
 //UPDATE
 	public function update(Profil_clientModel $client){
 
@@ -151,18 +162,17 @@ class profil_clientModel extends Model {
 			return '<p class="red">Le nom d\'utilisateur est vide.</p>';
 		}
 
-		$sql= "UPDATE client SET civilite = :civilite, nom = :nom, prenom = :prenom, date_de_naissance = : date_de_naissance, genre = :genre, adresse_postale = :adresse_postale , telephone = :telephone, pseudo = :pseudo, mdp= :mdp, mail = :mail WHERE id=".$client->id();
+		$sql= "UPDATE client SET civilite = :civilite, nom = :nom, prenom = :prenom, date_de_naissance = : date_de_naissance, genre = :genre, adresse_postale = :adresse_postale , telephone = :telephone, pseudo = :pseudo, mdp= :mdp, mail = :mail, admin = :admin WHERE id=".$client->id();
 		$query= $db -> prepare ($sql);
 		$query->bindValue(':nom', $client->nom());
 		$query->bindValue(':prenom', $client->prenom());
 		$query->bindValue(':date_de_naissance', $client->date_de_naissance());
-		$query->bindValue(':genre', $client->genre());
 		$query->bindValue(':adresse_postale', $client->adresse_postale());
 		$query->bindValue(':telephone', $client->telephone());
 		$query->bindValue(':pseudo', $client->pseudo());
 		$query->bindValue(':mdp', $client->mdp());
     $query->bindValue(':mail', $client->mail());
-
+    $query->bindValue(':admin', $client->admin());
 		$result = $query -> execute ();
 
 		if($result){	// Si $result est vrai alors la requête c'est bien déroulé
