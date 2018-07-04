@@ -2,6 +2,7 @@
 
 	<div id="bandeau">
 		<img id="logo" src="/E-commerce/img/arcade-logo.png">
+
 		<?php
 			echo	'<a class="moncompte" href="http://localhost/E-commerce/index.php/profil_client">Mon Compte</a>';
 		?>

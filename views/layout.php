@@ -10,14 +10,12 @@
     <link rel="stylesheet" type="text/css" href="/E-commerce/deco.css">
 
 
+
     <title>Site e-commerce</title>
   </head>
   <body>
 
     <?php
-
-
-
 
 	require_once $content;
 
