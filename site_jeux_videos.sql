@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Hôte : 127.0.0.1:3306
--- Généré le :  mer. 04 juil. 2018 à 10:30
+-- Généré le :  mer. 04 juil. 2018 à 18:36
 -- Version du serveur :  5.7.19
 -- Version de PHP :  7.1.9
 
@@ -158,33 +158,35 @@ INSERT INTO `produits` (`id`, `Titre`, `id_console`, `id_jeux`, `annee_de_sortie
 DROP TABLE IF EXISTS `profil_client`;
 CREATE TABLE IF NOT EXISTS `profil_client` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
-  `civilite` varchar(20) NOT NULL,
+  `civilite` enum('mr','mme') NOT NULL,
   `nom` varchar(50) NOT NULL,
   `prenom` varchar(50) NOT NULL,
-  `date_de_naissance` datetime NOT NULL,
-  `genre` int(11) NOT NULL,
+  `date_de_naissance` date NOT NULL,
   `adresse_postale` varchar(50) NOT NULL,
   `telephone` varchar(20) NOT NULL,
   `pseudo` varchar(50) NOT NULL,
   `mdp` varchar(500) NOT NULL,
   `mail` varchar(500) NOT NULL,
-  `admin` enum('yes','no') DEFAULT NULL,
+  `admin` enum('yes','no') DEFAULT 'no',
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=9 DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB AUTO_INCREMENT=12 DEFAULT CHARSET=latin1;
 
 --
 -- Déchargement des données de la table `profil_client`
 --
 
-INSERT INTO `profil_client` (`id`, `civilite`, `nom`, `prenom`, `date_de_naissance`, `genre`, `adresse_postale`, `telephone`, `pseudo`, `mdp`, `mail`, `admin`) VALUES
-(1, '', '', '', '1950-01-01 00:00:00', 1, '', '', '\'QueenGS\'', '\'bonjour\'', '', NULL),
-(2, '', '', '', '1950-01-01 00:00:00', 1, '', '', '\'VanillaG\'', '\'jpp\'', '', NULL),
-(3, '', '', '', '1950-01-01 00:00:00', 1, '', '', '\'Rokapik32\'', '\'hola\'', '', NULL),
-(4, '', '', '', '1950-01-01 00:00:00', 1, '', '', '\'test1\'', '\'fonctionne\'', '', NULL),
-(5, '', '', '', '1950-01-01 00:00:00', 1, '', '', '\'EinsteinG\'', '\'$2a$10$1qAz2wSx3eDc4rFv5tGb5e3Q9JTSCu.w84Yv8vcCCaR3jcBcrvhUO\'', '', NULL),
-(6, '', '', '', '1950-01-01 00:00:00', 1, '', '', '\'JULIENc\'', '\'$2a$10$1qAz2wSx3eDc4rFv5tGb5ehWvc8alPbEEj7rq/nBjwibguBgTXudK\'', '', NULL),
-(7, '', '', '', '1950-01-01 00:00:00', 1, '', '', '\'Abd\'', '\'$2a$10$1qAz2wSx3eDc4rFv5tGb5eNzGVmrn41l2C1N5/Q2Dj5xatsO7CH3q\'', '', NULL),
-(8, '', '', '', '1950-01-01 00:00:00', 1, '', '', '\'FLO\'', '\'Tk1bTyKVazGrutC+ylT+Lw==\'', '\'\'', NULL);
+INSERT INTO `profil_client` (`id`, `civilite`, `nom`, `prenom`, `date_de_naissance`, `adresse_postale`, `telephone`, `pseudo`, `mdp`, `mail`, `admin`) VALUES
+(1, 'mr', '', '', '1950-01-01', '', '', '\'QueenGS\'', '\'bonjour\'', '', NULL),
+(2, 'mr', '', '', '1950-01-01', '', '', '\'VanillaG\'', '\'jpp\'', '', NULL),
+(3, 'mr', '', '', '1950-01-01', '', '', '\'Rokapik32\'', '\'hola\'', '', NULL),
+(4, 'mr', '', '', '1950-01-01', '', '', '\'test1\'', '\'fonctionne\'', '', NULL),
+(5, 'mr', '', '', '1950-01-01', '', '', '\'EinsteinG\'', '\'$2a$10$1qAz2wSx3eDc4rFv5tGb5e3Q9JTSCu.w84Yv8vcCCaR3jcBcrvhUO\'', '', NULL),
+(6, 'mr', '', '', '1950-01-01', '', '', '\'JULIENc\'', '\'$2a$10$1qAz2wSx3eDc4rFv5tGb5ehWvc8alPbEEj7rq/nBjwibguBgTXudK\'', '', NULL),
+(7, 'mr', '', '', '1950-01-01', '', '', '\'Abd\'', '\'$2a$10$1qAz2wSx3eDc4rFv5tGb5eNzGVmrn41l2C1N5/Q2Dj5xatsO7CH3q\'', '', NULL),
+(8, 'mr', '', '', '1950-01-01', '', '', '\'FLO\'', '\'Tk1bTyKVazGrutC+ylT+Lw==\'', '\'\'', NULL),
+(9, 'mme', '\'Guiyoum\'', '\'FLORI\'', '1950-01-01', '\'90 rue de l enfer\'', '\'0196838421\'', '\'marre\'', '\'ok\'', '\'direction@lenfer.com\'', 'no'),
+(10, 'mme', '\'melinda\'', '\'wow\'', '1950-01-01', '\'4 recherche taff\'', '\'02009945\'', '\'fait\'', '\'hello\'', '\'faisle@demerdetoi.com\'', 'no'),
+(11, 'mme', '\'yue\'', '\'stradivarius\'', '1950-01-01', '\'3 place chinatown\'', '\'11111111\'', '\'front\'', '\'plomb\'', '\'bordeaux@jesuisloin.com\'', 'no');
 
 -- --------------------------------------------------------
 
