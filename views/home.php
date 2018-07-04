@@ -3,7 +3,10 @@
 require_once "navbar.php"
 ?>
 
+<?php
 
+require_once "layout.php"
+?>
 
 
 
