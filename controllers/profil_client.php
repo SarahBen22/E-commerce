@@ -5,8 +5,9 @@ require_once "models/profil_client.php";
 if (isset($_POST['profil_client']) && $_POST['profil_client'] == 'profil_client') {// isset= permet de voir si une variable est définie
 	 // on teste l'existence de nos variables. On teste également si elles ne sont pas vides
  if ( (isset($_POST['civilite']) && !empty($_POST['civilite'])) && (isset($_POST['nom']) && !empty($_POST['nom'])) && (isset($_POST['prenom']) && !empty($_POST['prenom'])) &&
- (isset($_POST['date_de_naissance']) && !empty($_POST['date_de_naissance']) && (isset($_POST['genre']) && !empty($_POST['genre']&& (isset($_POST['adresse_postale']) && !empty($_POST['adresse_postale']) && (isset($_POST['telephone']) &&
- !empty($_POST['telephone']) && (isset($_POST['pseudo']) && !empty($_POST['pseudo'])) && (isset($_POST['mdp']) && !empty($_POST['mdp'])) && (isset($_POST['mail']) && !empty($_POST['mail'])) ))) {
+ (isset($_POST['date_de_naissance']) && !empty($_POST['date_de_naissance'])) && (isset($_POST['genre']) && !empty($_POST['genre'])) && (isset($_POST['adresse_postale']) && !empty($_POST['adresse_postale'])) &&
+ (isset($_POST['telephone']) && !empty($_POST['telephone']) && (isset($_POST['pseudo']) && !empty($_POST['pseudo'])) && (isset($_POST['mdp']) && !empty($_POST['mdp'])) &&
+ (isset($_POST['mail']) && !empty($_POST['mail'])) )) {
 			// on teste les deux mots de passe
 
 
