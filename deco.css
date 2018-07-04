@@ -111,6 +111,24 @@ a.moncompte:hover {
 	color: gold;
 }
 
+a.inscription{
+
+  color: white;
+	float: right;
+	line-height: 30px;
+	margin-right: 18px;
+}
+
+a.connexion{
+
+  color: white;
+	float: right;
+	line-height: 30px;
+	margin-right: 25px;
+}
+
+
+
 
 #bandeau {
 	box-sizing: border-box;

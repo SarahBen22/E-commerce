@@ -12,6 +12,14 @@ require_once "views/layout.php";
 <h5>Nom</h5> <input type="text" name="nom" value="<?php if (isset($_POST['nom'])) echo htmlentities(trim($_POST['nom'])); ?>"><br />
 <h5>Numero de telephone</h5> <input type="tel" name="telephone" value="<?php if (isset($_POST['telephone'])) echo htmlentities(trim($_POST['telephone'])); ?>"><br />
 <h5>Adresse</h5> <input type="text" name="adresse_postale" value="<?php if (isset($_POST['adresse_postale'])) echo htmlentities(trim($_POST['adresse_postale'])); ?>"><br />
+<label for="mme" class="inline">Mme</label>
+<input type="radio" name="CSS" value="m" id="m" />
+<label for="mr" class="inline">M.</label><br />
+<input type="radio" name="CSS" value="mr" id="mr" />
+<h5>Adresse</h5> <input type="text" name="adresse_postale" value="<?php if (isset($_POST['adresse_postale'])) echo htmlentities(trim($_POST['adresse_postale'])); ?>"><br />
+<h5>Adresse</h5> <input type="text" name="adresse_postale" value="<?php if (isset($_POST['adresse_postale'])) echo htmlentities(trim($_POST['adresse_postale'])); ?>"><br />
+<h5>Adresse</h5> <input type="text" name="adresse_postale" value="<?php if (isset($_POST['adresse_postale'])) echo htmlentities(trim($_POST['adresse_postale'])); ?>"><br />
+
 
 
 </form>

@@ -3,7 +3,7 @@
 <html lang="en" dir="ltr">
   <head>
     <meta charset="utf-8">
-    <link rel="stylesheet" href="/Site_e-commerce/deco.css">
+    <link rel="stylesheet" href="/E-commerce/deco.css">
 
 
     <title>Site e-commerce</title>
@@ -16,6 +16,6 @@
 
      ?>
   <script src="http://code.jquery.com/jquery-3.3.1.min.js"></script>
-     	<script src="/Site_e-commerce/main.js"></script>
+     	<script src="/E-commerce/main.js"></script>
   </body>
 </html>

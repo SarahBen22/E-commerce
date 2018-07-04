@@ -1,9 +1,19 @@
 
 
 	<div id="bandeau">
-		<img id="logo" src="/Site_e-commerce/img/arcade-logo.png">
-		
-	echo	<a class="moncompte" href=\"/Site_e-commerce/index.php/profil_client\">Mon Compte</a>
+		<img id="logo" src="/E-commerce/img/arcade-logo.png">
+		<?php
+			echo	'<a class="moncompte" href="http://localhost/E-commerce/index.php/profil_client">Mon Compte</a>';
+		?>
+
+		<?php
+			echo	'<a class="inscription" href="http://localhost/E-commerce/index.php/inscription">Inscription</a>';
+		?>
+
+		<?php
+			echo	'<a class="connexion" href="http://localhost/E-commerce/index.php/connexion">Connexion</a>';
+		?>
+
 	</div>
 	<div id="navbar">
 
@@ -38,7 +48,7 @@
 		  	<li><a href="about.asp">Mieux Notés</a></li>
 		  	<li><a href="about.asp">Offres Spéciales</a></li>
 		  	<li><a href="about.asp">Goodies</a></li>
-		  	<li class="panier"><a  href="about.asp"><img class="basket" src="/Site_e-commerce/img/cart.png" width="35px" height="35px" ></a></li>
+		  	<li class="panier"><a  href="about.asp"><img class="basket" src="/E-commerce/img/cart.png" width="35px" height="35px" ></a></li>
 		 	<li id="searchbar">
 		  	<form>
 				<input type="search" placeholder="recherche" aria-label="Search" >

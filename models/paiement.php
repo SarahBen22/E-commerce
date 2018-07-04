@@ -98,7 +98,7 @@ class paiementModel extends Model {
 			return '<p class="red">Le paiement n\'est pas passé.</p>';
 		}
 
-		$sql= "UPDATE client SET civilite = :civilite, nom = :nom, prenom = :prenom, date_de_naissance = : date_de_naissance, genre = :genre, adresse_postale = :adresse_postale , telephone = :telephone, pseudo = :pseudo, mdp= :mdp, mail = :mail WHERE id=".$client->id();
+		$sql= "UPDATE pay SET civilite = :civilite, nom = :nom, prenom = :prenom, date_de_naissance = : date_de_naissance, genre = :genre, adresse_postale = :adresse_postale , telephone = :telephone, pseudo = :pseudo, mdp= :mdp, mail = :mail WHERE id=".$pay->id();
 		$query= $db -> prepare ($sql);
 		$query->bindValue(':type_de_paiement', $pay->type_de_paiement());
 		$query->bindValue(':num_de_carte', $pay->num_de_carte());
@@ -134,39 +134,6 @@ class paiementModel extends Model {
 
   		return '<p class="red">Echec de la suppression du paiement.</p>';
   	}
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 
