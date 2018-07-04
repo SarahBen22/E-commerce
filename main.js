@@ -1,4 +1,9 @@
 
+//--------------------------------CAROUSEL------------------------------------//
+
+
+
+
 
 /*!
  * Waterwheel Carousel
@@ -692,3 +697,35 @@ $(document).ready(function() {
 
 
 
+
+
+
+
+
+
+//------------------------------------ PANIER-----------------------------------------------//
+
+
+function LienOver() {
+  var lien = document.getElementsByTagName("a");
+  a.style.color = "#999999";
+};
+
+function LienOut() {
+  var lien = document.getElementsByTagName("a");
+  a.style.color = "";
+};
+
+
+
+function toggleForm(){
+    // on réccupère l'élément form.
+    var panier = document.getElementById('panier');
+  
+    // Condition pour afficher/cacher le formulaire en fonction de son état
+    if(panier.style.display == 'block'){
+        panier.style.display = 'none';
+    }else{
+        panier.style.display = 'block';
+    }
+}

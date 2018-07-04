@@ -85,10 +85,10 @@ class Type_de_jeuxModel extends Model {
 				$result = $query -> execute ();
 
 				if($result){	// Si $result est vrai alors la requête c'est bien déroulé
-					return '<p class="green">Le type de jeu'.$client->nom().' a bien été modifié.</p>';
+					return '<p class="green">Le type de jeu'.$type->nom().' a bien été modifié.</p>';
 				}
 				else{
-					return '<p class="red">Echec de la modification du type de jeu '.$client->nom().'</p>';
+					return '<p class="red">Echec de la modification du type de jeu '.$type->nom().'</p>';
 				}
 			}
 
@@ -110,34 +110,6 @@ class Type_de_jeuxModel extends Model {
 
 		  		return '<p class="red">Echec de la suppression du type de jeu.</p>';
 		  	}
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 }

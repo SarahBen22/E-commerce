@@ -19,7 +19,7 @@ class PanierModel extends Model {
 		 $data =$req->fetchAll(); //recup les données
 
 
-		 if (empty($data)) {// si rien ds le 1
+		 if (empty($data)) {
 				$sql = 'INSERT INTO panier VALUES(0, "'.$db->quote($id_produit).'","'.$db->quote($id_commande).'")';
 				$req= $db->prepare($sql) or die('Erreur SQL !'.$sql.'<br />'.mysql_error());
 				 $req->execute();
@@ -64,7 +64,7 @@ class PanierModel extends Model {
 		    }
 		}
 
-    public function setAventure( $id_commande ){
+    public function setCommande( $id_commande ){
       if(is_int($id_commande)){
         $this->id_commande= $id_commande;
       }
@@ -118,34 +118,6 @@ class PanierModel extends Model {
 
 		  		return '<p class="red">Echec de la suppression du produit dans le panier.</p>';
 		  	}
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 }

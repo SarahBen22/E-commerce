@@ -17,7 +17,8 @@ CREATE TABLE profil_client(
         adresse_postale   Varchar (50) NOT NULL ,
         telephone         Varchar (20) NOT NULL ,
         pseudo            Varchar (50) NOT NULL ,
-        mdp               Varchar (50) NOT NULL
+        mdp               Varchar (50) NOT NULL ,
+        admin             Numeric NOT NULL
 	,CONSTRAINT profil_client_PK PRIMARY KEY (id)
 )ENGINE=InnoDB;
 
@@ -28,10 +29,7 @@ CREATE TABLE profil_client(
 
 CREATE TABLE consoles(
         id          Int  Auto_increment  NOT NULL ,
-        xbox        Varchar (50) NOT NULL ,
-        playstation Varchar (50) NOT NULL ,
-        switch      Varchar (50) NOT NULL ,
-        pc          Varchar (50) NOT NULL
+        nom_console Varchar (50) NOT NULL
 	,CONSTRAINT consoles_PK PRIMARY KEY (id)
 )ENGINE=InnoDB;
 
@@ -41,12 +39,8 @@ CREATE TABLE consoles(
 #------------------------------------------------------------
 
 CREATE TABLE PEGI(
-        id    Int  Auto_increment  NOT NULL ,
-        3ans  Int NOT NULL ,
-        7ans  Int NOT NULL ,
-        12ans Int NOT NULL ,
-        16ans Int NOT NULL ,
-        18ans Int NOT NULL
+        id  Int  Auto_increment  NOT NULL ,
+        age Int NOT NULL
 	,CONSTRAINT PEGI_PK PRIMARY KEY (id)
 )ENGINE=InnoDB;
 
@@ -62,6 +56,7 @@ CREATE TABLE produits(
         id_pegi         Int NOT NULL ,
         id_jeux         Int NOT NULL ,
         annee_de_sortie Year NOT NULL ,
+        prix            Float NOT NULL ,
         stock           Int NOT NULL ,
         id_PEGI_limiter Int NOT NULL
 	,CONSTRAINT produits_PK PRIMARY KEY (id)
