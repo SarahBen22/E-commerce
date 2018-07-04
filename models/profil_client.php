@@ -34,7 +34,7 @@ class profil_clientModel extends Model {
   public function createOne (profil_clientModel $profil_client){
 
 	$db=parent::connect();
- $mdp=openssl_encrypt ($mdp,'aes128', '$2a$10$1qAz2wSx3eDc4rFv5tGb5t',true,2048204820482048);// mdp= mot de passe, aes128_= algorithme de cryptage,true=option, 2048*4= un nombre qui fait 16 chiffres=valeur d'initialisation
+ //$mdp=openssl_encrypt ($mdp,'aes128', '$2a$10$1qAz2wSx3eDc4rFv5tGb5t',true,2048204820482048);// mdp= mot de passe, aes128_= algorithme de cryptage,true=option, 2048*4= un nombre qui fait 16 chiffres=valeur d'initialisation
 
    // on recherche si ce login est déjà utilisé par un autre membre
    $sql = 'SELECT * FROM profil_client WHERE pseudo="'.$db->quote($profil_client->pseudo()).'"';
