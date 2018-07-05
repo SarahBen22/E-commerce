@@ -13,14 +13,14 @@ class Type_de_jeuxModel extends Model {
 		$db=parent::connect();
 
 		 // on recherche si ce login est déjà utilisé par un autre membre
-		 $sql = 'SELECT * FROM type_de_jeux WHERE nom="'.$db->quote($Nom).'"';
+		 $sql = 'SELECT * FROM type_de_jeux WHERE nom="$Nom"';
 		 $req = $db->prepare($sql) or die('Erreur SQL !<br />'.$sql.'<br />'.mysql_error());// voir s il y a une erreur
 		 $result=$req->execute();
 		 $data =$req->fetchAll(); //recup les données
 
 
 		 if (empty($data)) {// si rien ds le 1
-				$sql = 'INSERT INTO type_de_jeux VALUES(0, "'.$db->quote($Nom).'")';
+				$sql = 'INSERT INTO type_de_jeux VALUES(0, "$Nom")';
 				$req= $db->prepare($sql) or die('Erreur SQL !'.$sql.'<br />'.mysql_error());
 				 $req->execute();
 

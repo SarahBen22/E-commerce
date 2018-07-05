@@ -19,14 +19,14 @@ class ProduitsModel extends Model {
 		$db=parent::connect();
 
 		 // on recherche si le produit est déjà utilisé par un autre membre
-		 $sql = 'SELECT * FROM produits WHERE titre="'.$db->quote($titre).'"';
+		 $sql = 'SELECT * FROM produits WHERE titre="$titre"';
 		 $req = $db->prepare($sql) or die('Erreur SQL !<br />'.$sql.'<br />'.mysql_error());// voir s il y a une erreur
 		 $result=$req->execute();
 		 $data =$req->fetchAll(); //recup les données
 
 
 		 if (empty($data)) {
-				$sql = 'INSERT INTO produits VALUES(0, "'.$db->quote($titre).'","'.$db->quote($id_console).'","'.$db->quote($id_jeux).'","'.$db->quote($annee_de_sortie).'","'.$db->quote($stock).'","'.$db->quote($prix).'","'.$db->quote($id_pegi).'")';
+				$sql = 'INSERT INTO produits VALUES(0, "$titre","$id_console","$id_jeux","$annee_de_sortie","$stock","$prix","$id_pegi")';
 				$req= $db->prepare($sql) or die('Erreur SQL !'.$sql.'<br />'.mysql_error());
 				 $req->execute();
 

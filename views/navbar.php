@@ -4,19 +4,24 @@
 		<img id="logo" src="/E-commerce/img/arcade-logo.png">
 
 		<?php
-			echo	'<a class="moncompte" href="http://localhost/E-commerce/index.php/profil_client">Mon Compte</a>';
+			echo	'<a class="moncompte" href="/E-commerce/index.php/profil_client">Mon Compte</a>';
 		?>
 
 		<?php
-			echo	'<a class="inscription" href="http://localhost/E-commerce/index.php/inscription">Inscription</a>';
+			echo	'<a class="inscription" href="/E-commerce/index.php/inscription">Inscription</a>';
 		?>
 
 		<?php
-			echo	'<a class="connexion" href="http://localhost/E-commerce/index.php/connexion">Connexion</a>';
+if ($_SESSION){
+		echo	'<a class="deconnexion" href="/E-commerce/index.php/deconnexion">Deconnexion</a>';
+}
+else{
+			echo	'<a class="connexion" href="/E-commerce/index.php/connexion">Connexion</a>';
+}
 		?>
-		    
+
 				 <?php
-					echo	'<a class="commandes" href="http://localhost/E-commerce/index.php/commandes">Commandes</a>';
+					echo	'<a class="commandes" href="/E-commerce/index.php/commandes">Commandes</a>';
 				?>
 
 			</div>
@@ -24,7 +29,7 @@
 			<div id="navbar">
 
 				<ul id="menu">
-				  	<li><a class="home" href="http://localhost/E-commerce/">Home</a></li>
+				  	<li><a class="home" href="/E-commerce/">Home</a></li>
 
 				  	<li><a href="news.asp">Par Plateforme</a>
 				  		<ul class="plateforme">

@@ -37,15 +37,15 @@ class profil_clientModel extends Model {
  //$mdp=openssl_encrypt ($mdp,'aes128', '$2a$10$1qAz2wSx3eDc4rFv5tGb5t',true,2048204820482048);// mdp= mot de passe, aes128_= algorithme de cryptage,true=option, 2048*4= un nombre qui fait 16 chiffres=valeur d'initialisation
 
    // on recherche si ce login est déjà utilisé par un autre membre
-   $sql = 'SELECT * FROM profil_client WHERE pseudo="'.$db->quote($profil_client->pseudo()).'"';
+   $sql = 'SELECT * FROM profil_client WHERE pseudo="$profil_client->pseudo()"';
    $req = $db->prepare($sql) or die('Erreur SQL !<br />'.$sql.'<br />'.mysql_error());// voir s il y a une erreur
    $result=$req->execute();
    $data =$req->fetchAll(); //recup les données
 
 
    if (empty($data)) {// si rien ds le 1
-      $sql = 'INSERT INTO profil_client VALUES(0,"mme" ,"'.$db->quote($profil_client->nom()).'","'.$db->quote($profil_client->prenom()).'","1950-01-01","'.$db->quote($profil_client->adresse_postale()).'","'.$db->quote($profil_client->telephone()).'","'.$db->quote($profil_client->pseudo()).'", "'.$db->quote($profil_client->mdp()).'",
-      "'.$db->quote($profil_client->mail()).'","'. $profil_client->admin().'")';
+      $sql = 'INSERT INTO profil_client VALUES(0,"mme" ,"$profil_client->nom()","$profil_client->prenom()","1950-01-01","$profil_client->adresse_postale()"," $profil_client->telephone()","$profil_client->pseudo()", "$profil_client->mdp()",
+      "$profil_client->mail()","'. $profil_client->admin().'")';
       $req= $db->prepare($sql) or die('Erreur SQL !'.$sql.'<br />'.mysql_error());
        $req->execute();
 
@@ -57,7 +57,65 @@ class profil_clientModel extends Model {
    }
 
   }
-	public function getAll (){
+
+  public function getByData ($data){
+
+	  $db=parent::connect();
+
+    $sql= "select * from profil_client WHERE pseudo= :pseudo";
+    $query = $db -> prepare($sql);
+    $query->bindValue(':pseudo', $data);
+		$query -> execute();
+		$profil_client= $query -> fetch();
+
+  if (empty($profil_client)){
+  $sql= "select * from profil_client WHERE mail= ".$data;
+  $query = $db -> prepare($sql);
+  $query -> execute();
+  $profil_client= $query -> fetch();
+
+  if(empty($profil_client)){
+
+    return FALSE;
+  }
+  else{
+
+  // On enregistre les valeurs dans l'instance actuelle
+  $this->setId($profil_client['id']);
+  $this->setNom($profil_client['nom']);
+  $this->setMdp($profil_client['mdp']);
+  $this->setCivilite($profil_client['civilite']);
+  $this->setPrenom($profil_client['prenom']);
+  $this->setPseudo($profil_client['pseudo']);
+  $this->setAdresse_postale($profil_client['adresse_postale']);
+  $this->setTelephone($profil_client['telephone']);
+  $this->setMail($profil_client['mail']);
+  $this->setAdmin($profil_client['admin']);
+  return $this;
+
+
+  }
+}
+else{
+
+  $this->setId($profil_client['id']);
+  $this->setNom($profil_client['nom']);
+  $this->setMdp($profil_client['mdp']);
+  $this->setCivilite($profil_client['civilite']);
+  $this->setPrenom($profil_client['prenom']);
+  $this->setPseudo($profil_client['pseudo']);
+  $this->setAdresse_postale($profil_client['adresse_postale']);
+  $this->setTelephone($profil_client['telephone']);
+  $this->setMail($profil_client['mail']);
+  $this->setAdmin($profil_client['admin']);
+  return $this;
+
+
+}
+
+  }
+	public function getAll(){
+
 
 		$db=parent::connect();
 

@@ -15,14 +15,14 @@ class consolesModel extends Model {
 	$db=parent::connect();
 
    // on recherche si ce login est déjà utilisé par un autre membre
-   $sql = 'SELECT * FROM consoles WHERE nom_console="'.$db->quote($nom_console).'"';
+   $sql = 'SELECT * FROM consoles WHERE nom_console="$nom_console"';
    $req = $db->prepare($sql) or die('Erreur SQL !<br />'.$sql.'<br />'.mysql_error());// voir s il y a une erreur
    $result=$req->execute();
    $data =$req->fetchAll(); //recup les données
 
 
    if (empty($data)) {
-      $sql = 'INSERT INTO consoles VALUES(0,"'.$db->quote($nom_console).'")';
+      $sql = 'INSERT INTO consoles VALUES(0,"$nom_console")';
       $req= $db->prepare($sql) or die('Erreur SQL !'.$sql.'<br />'.mysql_error());
        $req->execute();
 
