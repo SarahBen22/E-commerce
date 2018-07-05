@@ -14,7 +14,10 @@
 		<?php
 			echo	'<a class="connexion" href="http://localhost/E-commerce/index.php/connexion">Connexion</a>';
 		?>
-
+		    
+				 <?php
+					echo	'<a class="commandes" href="http://localhost/E-commerce/index.php/commandes">Commandes</a>';
+				?>
 
 			</div>
 
