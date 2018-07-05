@@ -30,7 +30,7 @@ body {
 /*---------------------------NAVBAR----------------------------*/
 
 button, input{
-  font-family: 'big_noodle_titling'; 
+  font-family: 'big_noodle_titling';
   height: 25px;
   vertical-align: middle;
   margin: auto;
@@ -142,6 +142,14 @@ a.commandes{
 	margin-right: 30px;
 }
 
+a.deconnexion{
+
+  color: white;
+	float: right;
+	line-height: 30px;
+	margin-right: 25px;
+}
+
 #bandeau {
 	box-sizing: border-box;
 	margin: 0;
@@ -174,8 +182,8 @@ a.commandes{
 	height: auto;
 	padding-right: 10px;
 	float: right;
-  
-  
+
+
 
 }
 
@@ -251,7 +259,7 @@ a.commandes{
 form#panier {
     display: none;
     position: fixed;
-    
+
     margin-left: 800px;
     margin-top: 300px;
     width: 350px;
@@ -339,15 +347,15 @@ form#panier {
   margin: 0;
   border-radius: 3px;
   box-sizing: content-box;
- 
+
 }
 
 
 
 .platformlink img {
-  
+
   border: solid 1px #9d145e;
-  box-shadow: 2px 2px 5px  #9d145e; 
+  box-shadow: 2px 2px 5px  #9d145e;
   border-radius: 3px;
   box-sizing: content-box;
 }
@@ -365,8 +373,8 @@ form#panier {
 
  ul .row {
   display: flex;
-  
-  
+
+
   width: 100%;
   margin: 0;
   padding: 0;
@@ -398,10 +406,10 @@ li.col-sm {
   height: 180px;
   width: 100%;
   background-color: black;
-  bottom: 0; 
+  bottom: 0;
   display: flex;
   padding-left: 30px;
- 
+
 
 }
 
@@ -410,12 +418,12 @@ li.col-sm {
 
   display: inline-block;
   width: 180px ;
-  height: 170px ; 
+  height: 170px ;
   margin: 10px 20px;
   color: white;
 }
 .footer ul li {
- 
+
   width: 120px;
   display: block;
   margin: 3px 0;
