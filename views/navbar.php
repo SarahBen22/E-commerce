@@ -15,6 +15,7 @@
 			echo	'<a class="connexion" href="http://localhost/E-commerce/index.php/connexion">Connexion</a>';
 		?>
 
+
 			</div>
 			<div id="navbar">
 
