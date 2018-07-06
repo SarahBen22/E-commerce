@@ -2,16 +2,16 @@
 require_once "views/navbar.php";
 ?>
 <table class="tablo">
-<tr>
-<th>Numero de commande</th>
+<tr >
+<th class="gro">Numero de commande</th>
 
-<th>Date de commande</th>
+<th class="gro">Date de commande</th>
 </tr>
 
 <?php
 foreach ($CommandesListView as  $commande) {
 
-    echo "<tr><td>".$commande["num_commande"]."</td>  <td>". $commande["date_de_commande"]."</td> </tr> ";
+    echo "<tr ><td>".$commande["num_commande"]."</td>  <td>". $commande["date_de_commande"]."</td> </tr> ";
     
     
 }
