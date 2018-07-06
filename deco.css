@@ -265,27 +265,20 @@ a.deconnexion{
 
 
 form#panier {
-<<<<<<< HEAD
+
     
     position: absolute;
     display: none;
-    margin-left: 80%;
+    right: 0;
     margin-top: 50px;
     max-height: 300px;
-=======
-    display: none;
-    position: fixed;
-
-    margin-left: 800px;
-    margin-top: 300px;
->>>>>>> 2289af0c072bf1d65003f6caa36ae6472411436f
-    width: 350px;
+    max-width: 220px;
     z-index: 900;
     background-color: rgba(242, 242, 242, 0.80);
     border-radius: 3px;
     border: 1px solid #9d145e;
     padding: 0;
-    max-width: 220px;
+    
     
 }
 
