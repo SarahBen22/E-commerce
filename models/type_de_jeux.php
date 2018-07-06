@@ -13,14 +13,14 @@ class Type_de_jeuxModel extends Model {
 		$db=parent::connect();
 
 		 // on recherche si ce login est déjà utilisé par un autre membre
-		 $sql = 'SELECT * FROM type_de_jeux WHERE nom="'.$db->quote($Nom).'"';
+		 $sql = 'SELECT * FROM type_de_jeux WHERE nom="$Nom"';
 		 $req = $db->prepare($sql) or die('Erreur SQL !<br />'.$sql.'<br />'.mysql_error());// voir s il y a une erreur
 		 $result=$req->execute();
 		 $data =$req->fetchAll(); //recup les données
 
 
 		 if (empty($data)) {// si rien ds le 1
-				$sql = 'INSERT INTO type_de_jeux VALUES(0, "'.$db->quote($Nom).'")';
+				$sql = 'INSERT INTO type_de_jeux VALUES(0, "$Nom")';
 				$req= $db->prepare($sql) or die('Erreur SQL !'.$sql.'<br />'.mysql_error());
 				 $req->execute();
 
@@ -85,10 +85,10 @@ class Type_de_jeuxModel extends Model {
 				$result = $query -> execute ();
 
 				if($result){	// Si $result est vrai alors la requête c'est bien déroulé
-					return '<p class="green">Le type de jeu'.$client->nom().' a bien été modifié.</p>';
+					return '<p class="green">Le type de jeu'.$type->nom().' a bien été modifié.</p>';
 				}
 				else{
-					return '<p class="red">Echec de la modification du type de jeu '.$client->nom().'</p>';
+					return '<p class="red">Echec de la modification du type de jeu '.$type->nom().'</p>';
 				}
 			}
 
@@ -110,34 +110,6 @@ class Type_de_jeuxModel extends Model {
 
 		  		return '<p class="red">Echec de la suppression du type de jeu.</p>';
 		  	}
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 }

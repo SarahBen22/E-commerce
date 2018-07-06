@@ -7,8 +7,7 @@ require_once "views/navbar.php";
 
 <br />
 <h1>Se connecter :</h1>
-<h5>Pseudo :</h5> <input type="text" name="pseudo" value="<?php if (isset($_POST['pseudo'])) echo htmlentities(trim($_POST['pseudo'])); ?>">
-<h5>Email:</h5> <input type="email" name="email" value="<?php if (isset($_POST['mail'])) echo htmlentities(trim($_POST['mail'])); ?>">
+<h5>Pseudo ou mail :</h5> <input type="text" name="pseudo" value="<?php if (isset($_POST['pseudo'])) echo htmlentities(trim($_POST['pseudo'])); ?>">
 
 <h5>Mot de passe :</h5> <input type="password" name="mdp" value="<?php if (isset($_POST['mdp'])) echo htmlentities(trim($_POST['mdp'])); ?>">
 <br />

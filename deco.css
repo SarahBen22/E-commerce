@@ -30,7 +30,7 @@ body {
 /*---------------------------NAVBAR----------------------------*/
 
 button, input{
-  font-family: 'big_noodle_titling'; 
+  font-family: 'big_noodle_titling';
   height: 25px;
   vertical-align: middle;
   margin: auto;
@@ -118,6 +118,38 @@ a.moncompte:hover {
 	color: gold;
 }
 
+a.inscription{
+
+  color: white;
+	float: right;
+	line-height: 30px;
+	margin-right: 18px;
+}
+
+a.connexion{
+
+  color: white;
+	float: right;
+	line-height: 30px;
+	margin-right: 25px;
+}
+
+
+a.commandes{
+
+  color: white;
+	float: right;
+	line-height: 30px;
+	margin-right: 30px;
+}
+
+a.deconnexion{
+
+  color: white;
+	float: right;
+	line-height: 30px;
+	margin-right: 25px;
+}
 
 #bandeau {
 	box-sizing: border-box;
@@ -151,8 +183,8 @@ a.moncompte:hover {
 	height: auto;
 	padding-right: 10px;
 	float: right;
-  
-  
+
+
 
 }
 
@@ -233,12 +265,20 @@ a.moncompte:hover {
 
 
 form#panier {
+<<<<<<< HEAD
     
     position: absolute;
     display: none;
     margin-left: 80%;
     margin-top: 50px;
     max-height: 300px;
+=======
+    display: none;
+    position: fixed;
+
+    margin-left: 800px;
+    margin-top: 300px;
+>>>>>>> 2289af0c072bf1d65003f6caa36ae6472411436f
     width: 350px;
     z-index: 900;
     background-color: rgba(242, 242, 242, 0.80);
@@ -332,15 +372,15 @@ form#panier {
   margin: 0;
   border-radius: 3px;
   box-sizing: content-box;
- 
+
 }
 
 
 
 .platformlink img {
-  
+
   border: solid 1px #9d145e;
-  box-shadow: 2px 2px 5px  #9d145e; 
+  box-shadow: 2px 2px 5px  #9d145e;
   border-radius: 3px;
   box-sizing: content-box;
 }
@@ -358,8 +398,8 @@ form#panier {
 
  ul .row {
   display: flex;
-  
-  
+
+
   width: 100%;
   margin: 0;
   padding: 0;
@@ -391,10 +431,10 @@ li.col-sm {
   height: 180px;
   width: 100%;
   background-color: black;
-  bottom: 0; 
+  bottom: 0;
   display: flex;
   padding-left: 30px;
- 
+
 
 }
 
@@ -403,12 +443,12 @@ li.col-sm {
 
   display: inline-block;
   width: 180px ;
-  height: 170px ; 
+  height: 170px ;
   margin: 10px 20px;
   color: white;
 }
 .footer ul li {
- 
+
   width: 120px;
   display: block;
   margin: 3px 0;
@@ -506,3 +546,20 @@ a{
   width: 100%;
 
   }
+
+/*----------------------------------------COMMANDE--------------------------------------*/
+
+  .tablo
+{
+  margin-top: 11%;
+  margin-right: auto;
+  margin-left: auto;
+  font-size:20px;
+  border-collapse:separate;
+    border-spacing:100px 5px;
+    border: 1px solid black;
+    background: linear-gradient( #000000 , #202960 50% , #000000 100% );
+    
+	color:rgb( 135,18,81 );
+  
+}

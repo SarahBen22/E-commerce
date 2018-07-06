@@ -13,14 +13,14 @@ class PanierModel extends Model {
 		$db=parent::connect();
 
 		 // on recherche si ce login est déjà utilisé par un autre membre
-		 $sql = 'SELECT * FROM panier WHERE id_produit="'.$db->quote($id_produit).'"';
+		 $sql = 'SELECT * FROM panier WHERE id_produit="'$id_produit'"';
 		 $req = $db->prepare($sql) or die('Erreur SQL !<br />'.$sql.'<br />'.mysql_error());// voir s il y a une erreur
 		 $result=$req->execute();
 		 $data =$req->fetchAll(); //recup les données
 
 
-		 if (empty($data)) {// si rien ds le 1
-				$sql = 'INSERT INTO panier VALUES(0, "'.$db->quote($id_produit).'","'.$db->quote($id_commande).'")';
+		 if (empty($data)) {
+				$sql = 'INSERT INTO panier VALUES(0, "'$id_produit","'$id_commande'")';
 				$req= $db->prepare($sql) or die('Erreur SQL !'.$sql.'<br />'.mysql_error());
 				 $req->execute();
 
@@ -64,7 +64,7 @@ class PanierModel extends Model {
 		    }
 		}
 
-    public function setAventure( $id_commande ){
+    public function setCommande( $id_commande ){
       if(is_int($id_commande)){
         $this->id_commande= $id_commande;
       }
@@ -118,34 +118,6 @@ class PanierModel extends Model {
 
 		  		return '<p class="red">Echec de la suppression du produit dans le panier.</p>';
 		  	}
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 }
