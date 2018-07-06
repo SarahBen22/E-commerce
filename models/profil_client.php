@@ -44,8 +44,8 @@ class profil_clientModel extends Model {
 
 
    if (empty($data)) {// si rien ds le 1
-      $sql = 'INSERT INTO profil_client VALUES(0,"mme" ,"$profil_client->nom()","$profil_client->prenom()","1950-01-01","$profil_client->adresse_postale()"," $profil_client->telephone()","$profil_client->pseudo()", "$profil_client->mdp()",
-      "$profil_client->mail()","'. $profil_client->admin().'")';
+      $sql = 'INSERT INTO profil_client VALUES(0,"mme" ,"'.$profil_client->nom().'","'.$profil_client->prenom().'","1950-01-01","'.$profil_client->adresse_postale().'"," '.$profil_client->telephone().'","'.$profil_client->pseudo().'", "'.$profil_client->mdp().'",
+      "'.$profil_client->mail().'","'.$profil_client->admin().'")';
       $req= $db->prepare($sql) or die('Erreur SQL !'.$sql.'<br />'.mysql_error());
        $req->execute();
 
