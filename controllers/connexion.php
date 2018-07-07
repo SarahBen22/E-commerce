@@ -12,12 +12,14 @@ if (isset($_POST['connexion']) && $_POST['connexion'] == 'Connexion') {// isset=
 				$client= $client->getByData($_POST['pseudo']);
 
 		if ($client && password_verify($_POST['mdp'], $client->mdp())){
+
 			$_SESSION['pseudo'] = $client->pseudo();
 	    $_SESSION['mail'] = $client->mail();
+			 $_SESSION['id'] = $client->id();
 	    $_SESSION['admin'] = $client->admin();
   		header('Location: ./home');
 		}
-		else{
+		else{ 
 
 			$erreur= 'l\'un des champs est incorrect';
 		}

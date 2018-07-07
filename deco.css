@@ -560,3 +560,164 @@ a{
 th, td  {
   border: 1px solid black;
 }
+
+
+/*----------------------------------------PAIEMENT--------------------------------------*/
+
+
+.contour{
+
+  font-family: 'Montserrat', sans-serif;
+  display: flex;
+  width: 100%;
+  height: 100%;
+  background: #f4f4f4;
+  justify-content: center;
+  align-items: center;
+  box-sizing: border-box;
+}
+
+.checkout-panel {
+  display: flex;
+  flex-direction: column;
+  width: 940px;
+  height: 766px;
+  background-color: rgb(255, 255, 255);
+  box-shadow: 0 1px 1px 0 rgba(0, 0, 0, .2);
+}
+
+
+
+.panel-body {
+  padding: 45px 80px 0;
+  flex: 1;
+}
+
+.title {
+  font-weight: 700;
+  margin-top: 0;
+  margin-bottom: 40px;
+  color: #2e2e2e;
+}
+
+
+.progress-bar {
+  display: flex;
+  margin-bottom: 50px;
+  justify-content: space-between;
+}
+
+.step {
+  box-sizing: border-box;
+  position: relative;
+  z-index: 1;
+  display: block;
+  width: 25px;
+  height: 25px;
+  margin-bottom: 30px;
+  border: 4px solid #fff;
+  border-radius: 50%;
+  background-color: #efefef;
+}
+
+.step:after {
+  position: absolute;
+  z-index: -1;
+  top: 5px;
+  left: 22px;
+  width: 225px;
+  height: 6px;
+  content: '';
+  background-color: #efefef;
+}
+
+.step:before {
+  color: #2e2e2e;
+  position: absolute;
+  top: 40px;
+}
+
+.step:last-child:after {
+  content: none;
+}
+
+.step.active {
+  background-color: #f62f5e;
+}
+.step.active:after {
+  background-color: #f62f5e;
+}
+.step.active:before {
+  color: #f62f5e;
+}
+.step.active + .step {
+  background-color: #f62f5e;
+}
+.step.active + .step:before {
+  color: #f62f5e;
+}
+
+.step:nth-child(1):before {
+  content: 'Delivery';
+}
+.step:nth-child(2):before {
+  right: -40px;
+  content: 'Confirmation';
+}
+.step:nth-child(3):before {
+  right: -30px;
+  content: 'Payment';
+}
+.step:nth-child(4):before {
+  right: 0;
+  content: 'Finish';
+}
+
+.panel-footer {
+  display: flex;
+  width: 100%;
+  height: 96px;
+  padding: 0 80px;
+  background-color: rgb(239, 239, 239);
+  justify-content: space-between;
+  align-items: center;
+}
+
+
+.btn {
+  font-size: 16px;
+  width: 163px;
+  height: 48px;
+  cursor: pointer;
+  transition: all .2s ease-in-out;
+  letter-spacing: 1px;
+  border: none;
+  border-radius: 23px;
+}
+
+.back-btn {
+  color: #f62f5e;
+  background: #fff;
+}
+
+.next-btn {
+  color: #fff;
+  background: #f62f5e;
+}
+
+.btn:focus {
+  outline: none;
+}
+
+.btn:hover {
+  transform: scale(1.1);
+}
+
+.blue-border {
+  border: 1px solid rgb(110, 178, 251);
+}
+
+
+.warning {
+  border-color: #f62f5e;
+}

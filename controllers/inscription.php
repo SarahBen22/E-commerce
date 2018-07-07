@@ -10,8 +10,9 @@ if (isset($_POST['inscription']) && $_POST['inscription'] == 'Inscription') {// 
 				 $erreur = 'Les 2 mots de passe sont différents.';
 			}
 			else {
-				$client= new profil_clientModel ();
-				$erreur= $client-> createOne($_POST['pseudo'],$_POST['mdp']);
+				$client= new profil_clientModel (['id' => 0 , 'civilite' =>"",'nom' =>"",'prenom' => "",'date_de_naissance' =>"",
+         'adresse_postale' => "",'telephone' => "",'pseudo' => $_POST['pseudo'],'mdp' => $_POST['mdp'],'mail' =>$_POST['mail'],'admin' => "no"]);
+				$erreur= $client-> createOne($client);
 
 				if ($erreur==0)
 				$_SESSION['pseudo'] = $_POST['pseudo'];

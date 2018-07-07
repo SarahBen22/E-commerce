@@ -444,7 +444,7 @@
         data.currentlyMoving = true;
         data.itemsAnimating = 0;
         data.carouselRotationsLeft += rotations;
-        
+
         if (options.quickerForFurther === true) {
           // Figure out how fast the carousel should rotate
           if (rotations > 1) {
@@ -474,7 +474,7 @@
             // when we have an item switch sides. The right side will always have 1 more in that case
             if (data.totalItems % 2 == 0) {
               newPosition += 1;
-            } 
+            }
           }
 
           moveItem($item, newPosition);
@@ -508,7 +508,7 @@
       // Remove autoplay
       autoPlay(true);
       options.autoPlay = 0;
-      
+
       var rotations = Math.abs(itemPosition);
       if (itemPosition == 0) {
         options.clickedCenter($(this));
@@ -578,7 +578,7 @@
 
       rotateCarousel(1);
     }
-    
+
     /**
      * Navigation with arrow keys
      */
@@ -628,7 +628,7 @@
         setupStarterRotation();
       });
     }
-    
+
     this.next = function() {
       autoPlay(true);
       options.autoPlay = 0;
@@ -657,14 +657,14 @@
     sizeMultiplier:             0.7, // determines how drastically the size of each item changes
     opacityMultiplier:          0.8, // determines how drastically the opacity of each item changes
     horizon:                    0,   // how "far in" the horizontal/vertical horizon should be set from the container wall. 0 for auto
-    flankingItems:              3,   // the number of items visible on either side of the center                  
+    flankingItems:              3,   // the number of items visible on either side of the center
 
     // animation
     speed:                      300,      // speed in milliseconds it will take to rotate from one to the next
     animationEasing:            'linear', // the easing effect to use when animating
     quickerForFurther:          true,     // set to true to make animations faster when clicking an item that is far away from the center
     edgeFadeEnabled:            false,    // when true, items fade off into nothingness when reaching the edge. false to have them move behind the center image
-    
+
     // misc
     linkHandling:               2,                 // 1 to disable all (used for facebox), 2 to disable all but center (to link images out)
     autoPlay:                   0,                 // indicate the speed in milliseconds to wait before autorotating. 0 to turn off. Can be negative
@@ -675,7 +675,7 @@
     imageNav:                   true,              // clicking a non-center image will rotate that image to the center
 
     // preloader
-    preloadImages:              true,  // disable/enable the image preloader. 
+    preloadImages:              true,  // disable/enable the image preloader.
     forcedImageWidth:           0,     // specify width of all images; otherwise the carousel tries to calculate it
     forcedImageHeight:          0,     // specify height of all images; otherwise the carousel tries to calculate it
 
@@ -721,7 +721,7 @@ function LienOut() {
 function affichage(id){
     // on réccupère l'élément form.
     var panier = document.getElementById('panier');
-  
+
     // Condition pour afficher/cacher le formulaire en fonction de son état
     if(panier.style.display == 'block'){
         panier.style.display = 'none';
@@ -731,10 +731,6 @@ function affichage(id){
 }
 
 //----------------------------------------OTHER----------------------------------//
-
-
-
-
 
 
 // comportement du panier au survol pour affichage de son contenu
@@ -760,4 +756,32 @@ $('#cart-dropdown').on({
   mouseleave: function() {
     $('#cart-dropdown').hide();
   }
+});
+
+
+
+//----------------------------------------PAIEMENT PAGE----------------------------------//
+
+$(document).ready(function() {
+
+  $('.method').on('click', function() {
+    $('.method').removeClass('blue-border');
+    $(this).addClass('blue-border');
+  });
+
+})
+
+
+var $cardInput = $('.input-fields input');
+
+$('.next-btn').on('click', function(e) {
+
+  $cardInput.removeClass('warning');
+
+  $cardInput.each(function() {
+     var $this = $(this);
+     if (!$this.val()) {
+       $this.addClass('warning');
+     }
+  })
 });
