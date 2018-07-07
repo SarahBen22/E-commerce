@@ -2,7 +2,7 @@
 
 	<div id="bandeau">
 
-		<img id="logo" src="/e-commerce/img/arcade-logo.png">
+		<img id="logo" src="/E-commerce/img/arcade-logo.png">
 
 				<?php
 			echo	'<a class="moncompte" href="/E-commerce/index.php/profil_client">Mon Compte</a>';
@@ -31,7 +31,7 @@ else{
 	<div id="navbar">
 
 		<ul id="menu">
-		  	<li><a class="home" href="/e-commerce/img/default.html">Home</a></li>
+		  	<li><a class="home" href="/E-commerce/img/default.html">Home</a></li>
 
 		  	<li><a href="news.asp">Par Plateforme</a>
 		  		<ul class="plateforme">
@@ -68,7 +68,7 @@ else{
 		  	<li class="panier"  onmouseover="affichage('panier')" onmouseout="affichage('panier')"> 
 		  		<dl>
 		  			<dt>
-		  				<a  href="about.asp"><img class="basket" src="/e-commerce/img/cart.png" width="35px" height="35px" ></a>
+		  				<a  href="about.asp"><img class="basket" src="/E-commerce/img/cart.png" width="35px" height="35px" ></a>
 		  			</dt>
 
 					<dd> 

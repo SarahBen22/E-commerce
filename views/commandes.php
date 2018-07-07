@@ -3,9 +3,11 @@ require_once "views/navbar.php";
 ?>
 <table class="tablo">
 <tr >
-<th class="gro">Numero de commande</th>
+<th >Numero de commande</th>
 
-<th class="gro">Date de commande</th>
+<th >Date de commande</th>
+
+
 </tr>
 
 <?php

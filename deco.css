@@ -544,14 +544,15 @@ a{
 
   .tablo
 {
+  width:50%;
   margin-top: 11%;
   margin-right: auto;
   margin-left: auto;
-  font-size:80px;
+  font-size:40px;
   border-collapse:separate;
     border-spacing:100px 5px;
     border: 1px solid black;
-    background: linear-gradient( #000000 , #202960 50% , #000000 100% );
+  
     
 	color:rgb( 135,18,81 );
   
@@ -559,6 +560,6 @@ a{
 
 .gro
 {
-font-size: 80px;
+font-size: 40px;
 
 }
