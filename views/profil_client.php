@@ -9,8 +9,9 @@ require_once "views/layout.php";
 
 <h1>Profil Client :</h1>
 <label for="mme" class="inline">Mme</label>
-<input type="radio" name="civilite" value="mme" id="mme" /><input type="radio" name="CSS" value="mr" id="mr" />
-<label for="mr" class="inline">M.</label><br />
+<input class="civilite" type="radio" name="civilite" value="mme" id="mme" />
+<label for="mr" class="inline">M.</label>
+<input class="civilite" type="radio" name="CSS" value="mr" id="mr" /><br />
 <h5>Nom</h5> <input type="text" name="nom" value="<?php if (isset($_POST['nom'])) echo htmlentities(trim($_POST['nom'])); ?>"><br />
 
 <h5>Prenom</h5> <input type="text" name="prenom" value="<?php if (isset($_POST['prenom'])) echo htmlentities(trim($_POST['prenom'])); ?>"><br /><br />
