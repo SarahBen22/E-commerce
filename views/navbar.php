@@ -24,6 +24,9 @@ else{
 				 <?php
 					echo	'<a class="commandes" href="/E-commerce/index.php/commandes">Commandes</a>';
 				?>
+				<?php
+					echo	'<a class="produits" href="/E-commerce/index.php/produits">produits</a>';
+				?>
 
 			</div>
 
