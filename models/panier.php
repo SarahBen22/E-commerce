@@ -7,8 +7,9 @@ class PanierModel extends Model {
 	  private $id;
 		private $id_produit;
 	  private $id_commande;
+		private $quantite;
 
-		public function createOne ($id_produit, $id_commande){
+		public function createOne ($id_produit, $id_commande,$quantite){
 
 		$db=parent::connect();
 
@@ -20,7 +21,7 @@ class PanierModel extends Model {
 
 
 		 if (empty($data)) {
-				$sql = 'INSERT INTO panier VALUES(0, "'$id_produit","'$id_commande'")';
+				$sql = 'INSERT INTO panier VALUES(0, "'$id_produit","'$id_commande'","$quantite")';
 				$req= $db->prepare($sql) or die('Erreur SQL !'.$sql.'<br />'.mysql_error());
 				 $req->execute();
 
@@ -49,6 +50,8 @@ class PanierModel extends Model {
 	  public function id() { return $this->id; }
 	  public function id_produit() { return $this->id_produit; }
     public function id_commande() { return $this->id_commande; }
+		public function quantite() { return $this->quantite;}
+
 		// SETTERS // pour assigner des valeurs aux attributs
 		  public function setId( $id ){
 		    $id = (int) $id;
@@ -70,7 +73,12 @@ class PanierModel extends Model {
       }
   }
 
+	public function setQuantite( $quantite ){
+		if(is_int($quantite)){
+			$this->quantite = $quantite;
+		}
 
+	}
 
 		//UPDATE
 			public function update(PanierModel $pan){
@@ -85,10 +93,10 @@ class PanierModel extends Model {
 					return '<p class="red">Le panier est vide.</p>';
 				}
 
-				$sql= "UPDATE pan SET id_produit = :id_produit, id_commande = :id_commande WHERE id=".$pan->id();
+				$sql= "UPDATE pan SET id_produit = :id_produit, id_commande = :id_commande, quantite = :quantite WHERE id=".$pan->id();
 				$query= $db -> prepare ($sql);
 				$query->bindValue(':id_produit', $pan->id_produit());
-
+				$query->bindValue(':quantite', $comm->quantite());
 
 				$result = $query -> execute ();
 

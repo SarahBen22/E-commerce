@@ -8,9 +8,10 @@ if (true) {// isset= permet de voir si une variable est définie
 			// on teste les deux mots de passe
 
 
-				$client= new profil_clientModel(['id' => 0 , 'civilite' =>"",'nom' => $_POST['nom'],'prenom' => $_POST['prenom'],'date_de_naissance' => $_POST['date_de_naissance'],
-         'adresse_postale' => $_POST['adresse_postale'],'telephone' => $_POST['telephone'],'pseudo' => $_POST['pseudo'],'mdp' => $_POST['mdp'],'mail' => $_POST['mail'],'admin' => "no"]);
-				$erreur= $client-> createOne($client);
+				$client= new profil_clientModel(['id' => 0 , 'civilite' =>"",'nom' => htmlspecialchars($_POST['nom']),'prenom' =>  htmlspecialchars($_POST['prenom']),'date_de_naissance' =>  htmlspecialchars($_POST['date_de_naissance']),
+         'adresse_postale' =>  htmlspecialchars($_POST['adresse_postale']),'telephone' =>  htmlspecialchars($_POST['telephone']),'pseudo' =>  htmlspecialchars($_POST['pseudo']),'mdp' =>  htmlspecialchars($_POST['mdp']),'mail' =>  htmlspecialchars($_POST['mail']),'admin' => "no"]);
+//htmlspecialchars= protection des données
+      	$erreur= $client-> createOne($client);
 
 				if ($erreur==0)
 				$_SESSION['pseudo'] = $_POST['pseudo'];

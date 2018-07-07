@@ -34,7 +34,6 @@ class profil_clientModel extends Model {
   public function createOne (profil_clientModel $profil_client){
 
 	$db=parent::connect();
- //$mdp=openssl_encrypt ($mdp,'aes128', '$2a$10$1qAz2wSx3eDc4rFv5tGb5t',true,2048204820482048);// mdp= mot de passe, aes128_= algorithme de cryptage,true=option, 2048*4= un nombre qui fait 16 chiffres=valeur d'initialisation
 
    // on recherche si ce login est déjà utilisé par un autre membre
    $sql = 'SELECT * FROM profil_client WHERE pseudo="$profil_client->pseudo()"';
@@ -44,7 +43,7 @@ class profil_clientModel extends Model {
 
 
    if (empty($data)) {// si rien ds le 1
-      $sql = 'INSERT INTO profil_client VALUES(0,"mme" ,"'.$profil_client->nom().'","'.$profil_client->prenom().'","1950-01-01","'.$profil_client->adresse_postale().'"," '.$profil_client->telephone().'","'.$profil_client->pseudo().'", "'.$profil_client->mdp().'",
+      $sql = 'INSERT INTO profil_client VALUES(0,"mme" ,"'.$profil_client->nom().'","'.$profil_client->prenom().'","1950-01-01","'.$profil_client->adresse_postale().'"," '.$profil_client->telephone().'","'.$profil_client->pseudo().'", "'. password_hash($profil_client->mdp(),PASSWORD_DEFAULT).'",
       "'.$profil_client->mail().'","'.$profil_client->admin().'")';
       $req= $db->prepare($sql) or die('Erreur SQL !'.$sql.'<br />'.mysql_error());
        $req->execute();

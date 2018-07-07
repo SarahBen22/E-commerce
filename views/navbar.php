@@ -2,7 +2,7 @@
 
 	<div id="bandeau">
 
-		<img id="logo" src="/e-commerce/img/arcade-logo.png">
+		<img id="logo" src="/E-commerce/img/arcade-logo.png">
 
 				<?php
 			echo	'<a class="moncompte" href="/E-commerce/index.php/profil_client">Mon Compte</a>';
@@ -26,12 +26,12 @@ else{
 				?>
 
 			</div>
-		
-	
+
+
 	<div id="navbar">
 
 		<ul id="menu">
-		  	<li><a class="home" href="/e-commerce/img/default.html">Home</a></li>
+		  	<li><a class="home" href="/E-commerce/index.php/home">Home</a></li>
 
 		  	<li><a href="news.asp">Par Plateforme</a>
 		  		<ul class="plateforme">
@@ -62,22 +62,22 @@ else{
 		  	<li><a href="about.asp">Offres Spéciales</a></li>
 		  	<li><a href="about.asp">Goodies</a></li>
 
-		  	
-		  	
-		  	
-		  	<li class="panier"  onmouseover="affichage('panier')" onmouseout="affichage('panier')"> 
+
+
+
+		  	<li class="panier"  onmouseover="affichage('panier')" onmouseout="affichage('panier')">
 		  		<dl>
 		  			<dt>
-		  				<a  href="about.asp"><img class="basket" src="/e-commerce/img/cart.png" width="35px" height="35px" ></a>
+		  				<a  href="about.asp"><img class="basket" src="/E-commerce/img/cart.png" width="35px" height="35px" ></a>
 		  			</dt>
 
-					<dd> 
+					<dd>
 						<div class="dropdown" >
 						  <div id="cart" >
 						    <p><span id="in-cart-items-num">0</span> Articles</p>
 						  </div>
-						                              
-		
+
+
 					</dd>
 				</dl>
 			</li>
@@ -95,7 +95,6 @@ else{
 	</div>
 
 
-			
 
 
 
@@ -106,7 +105,8 @@ else{
 
 
 
-	<form id="panier" onmouseover="affichage('panier')" onmouseout="affichage('panier')" action="../static/controllers/users.php" method="post" enctype="multipart/form-data">  
+
+	<form id="panier" onmouseover="affichage('panier')" onmouseout="affichage('panier')" action="../static/controllers/users.php" method="post" enctype="multipart/form-data">
 
 		 <table class="table">
 		  <thead>
@@ -115,10 +115,10 @@ else{
 		  <tbody id="cart-tablebody">
 		  </tbody>
 		</table>
-        
+
 		<p>Sous total : <span class="subtotal"></span>€</p>
 
-		<button id="confirm-command">Passer la commande</button>   
+		<button id="confirm-command">Passer la commande</button>
 	</form>
 
 
@@ -131,4 +131,3 @@ else{
 		<?php
 
 		?>
-
