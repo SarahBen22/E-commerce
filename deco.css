@@ -296,6 +296,8 @@ form#panier {
   border-top: none;
 }
 
+
+
 /*-----------------------------SLIDESHOW-------------------------*/
 
 .container {
@@ -561,6 +563,6 @@ a{
 
 }
 
-th, td  {
+.tableau th, td  {
   border: 1px solid black;
 }
