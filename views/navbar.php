@@ -24,9 +24,7 @@ else{
 				 <?php
 					echo	'<a class="commandes" href="/E-commerce/index.php/commandes">Commandes</a>';
 				?>
-				<?php
-					echo	'<a class="produits" href="/E-commerce/index.php/produits">produits</a>';
-				?>
+				
 
 			</div>
 
@@ -38,6 +36,10 @@ else{
 
 		  	<li><a class="home" href="/E-commerce/index.php/home">Home</a></li>
 
+		  	<li>
+		  		<a href="about.asp">Produits</a>
+
+		  	</li>
 
 		  	<li><a href="news.asp">Par Plateforme</a>
 		  		<ul class="plateforme">
