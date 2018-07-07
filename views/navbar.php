@@ -31,7 +31,7 @@ else{
 	<div id="navbar">
 
 		<ul id="menu">
-		  	<li><a class="home" href="/e-commerce/img/default.html">Home</a></li>
+		  	<li><a class="home" href="/e-commerce/index.php/home">Home</a></li>
 
 		  	<li><a href="news.asp">Par Plateforme</a>
 		  		<ul class="plateforme">
@@ -74,7 +74,7 @@ else{
 					<dd> 
 						<div class="dropdown" >
 						  <div id="cart" >
-						    <p><span id="in-cart-items-num">0</span> Articles</p>
+						    <p><span id="in-cart-items-num">0</span> Article(s)</p>
 						  </div>
 						                              
 		
@@ -106,9 +106,10 @@ else{
 
 
 
-	<form id="panier" onmouseover="affichage('panier')" onmouseout="affichage('panier')" action="../static/controllers/users.php" method="post" enctype="multipart/form-data">  
+	<form id="panier" onmouseover="affichage('panier')" onmouseout="affichage('panier')" action="/E-commerce/index.php/commandes" method="post" enctype="multipart/form-data">  
 
-		 <table class="table">
+<?php  echo
+		 '<table class="table">
 		  <thead>
 		    <tr><th>Article</th><th>Prix</th><th>Quantité</th></tr>
 		  </thead>
@@ -119,11 +120,11 @@ else{
 		<p>Sous total : <span class="subtotal"></span>€</p>
 
 		<button id="confirm-command">Passer la commande</button>   
-	</form>
+	</form>'
 
 
 
-
+?>
 
 
 

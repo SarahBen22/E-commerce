@@ -21,7 +21,7 @@
 
     <?php
 
-$content = "home.php";
+
 	require_once $content;
 
 
