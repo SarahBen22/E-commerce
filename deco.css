@@ -192,7 +192,7 @@ a.deconnexion{
 
 	border-radius: 0 0 10px 10px;
   max-width: 90px;
- 
+
 }
 
 #menu ul{
@@ -206,7 +206,7 @@ a.deconnexion{
 	transition: .3s all .05s;
 	display: block;
 	background: linear-gradient( #000000 , #9d145e 50% , #000000 100% );
- 
+
  border-width: 0px 1px 0px 1px;
  border-style: solid;
  border-color: #d9d9d9;
@@ -215,7 +215,7 @@ a.deconnexion{
 #menu li:hover ul{
 
 	max-height: 800px;
-	
+
 	border-top: none;
 	box-sizing: content-box;
   max-width: 90px;
@@ -249,7 +249,7 @@ a.deconnexion{
 
 .plateforme {
 	left: 61px;
-  
+
 }
 
 
@@ -266,7 +266,7 @@ a.deconnexion{
 
 form#panier {
 
-    
+
     position: absolute;
     display: none;
     right: 0;
@@ -278,8 +278,13 @@ form#panier {
     border-radius: 30px 3px 30px 5px;
     border: 1px solid #9d145e;
     padding: 0;
+<<<<<<< HEAD
     text-align: center;
     
+=======
+
+
+>>>>>>> d9e1226175716e15bf78e5ad33ad8c813edf7d56
 }
 
 
@@ -543,19 +548,23 @@ a{
 
   }
 
-/*----------------------------------------COMMANDE--------------------------------------*/
+/*----------------------------------------COMMANDES--------------------------------------*/
 
-  .tablo
+  .tableau
 {
   margin-top: 11%;
   margin-right: auto;
   margin-left: auto;
   font-size:20px;
   border-collapse:separate;
-    border-spacing:100px 5px;
-    border: 1px solid black;
-    background: linear-gradient( #000000 , #202960 50% , #000000 100% );
-    
-	color:rgb( 135,18,81 );
-  
+  border-spacing:50px 5px;
+  border: 2px solid black;
+  background-color: rgb(176, 196, 222);
+
+	color:rgb( 129, 20, 83);
+
+}
+
+th, td  {
+  border: 1px solid black;
 }

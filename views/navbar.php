@@ -2,7 +2,7 @@
 
 	<div id="bandeau">
 
-		<img id="logo" src="/e-commerce/img/arcade-logo.png">
+		<img id="logo" src="/E-commerce/img/arcade-logo.png">
 
 				<?php
 			echo	'<a class="moncompte" href="/E-commerce/index.php/profil_client">Mon Compte</a>';
@@ -26,12 +26,16 @@ else{
 				?>
 
 			</div>
-		
-	
+
+
 	<div id="navbar">
 
 		<ul id="menu">
+<<<<<<< HEAD
 		  	<li><a class="home" href="/e-commerce/index.php/home">Home</a></li>
+=======
+		  	<li><a class="home" href="/E-commerce/index.php/home">Home</a></li>
+>>>>>>> d9e1226175716e15bf78e5ad33ad8c813edf7d56
 
 		  	<li><a href="news.asp">Par Plateforme</a>
 		  		<ul class="plateforme">
@@ -62,22 +66,22 @@ else{
 		  	<li><a href="about.asp">Offres Spéciales</a></li>
 		  	<li><a href="about.asp">Goodies</a></li>
 
-		  	
-		  	
-		  	
-		  	<li class="panier"  onmouseover="affichage('panier')" onmouseout="affichage('panier')"> 
+
+
+
+		  	<li class="panier"  onmouseover="affichage('panier')" onmouseout="affichage('panier')">
 		  		<dl>
 		  			<dt>
-		  				<a  href="about.asp"><img class="basket" src="/e-commerce/img/cart.png" width="35px" height="35px" ></a>
+		  				<a  href="about.asp"><img class="basket" src="/E-commerce/img/cart.png" width="35px" height="35px" ></a>
 		  			</dt>
 
-					<dd> 
+					<dd>
 						<div class="dropdown" >
 						  <div id="cart" >
 						    <p><span id="in-cart-items-num">0</span> Article(s)</p>
 						  </div>
-						                              
-		
+
+
 					</dd>
 				</dl>
 			</li>
@@ -95,7 +99,6 @@ else{
 	</div>
 
 
-			
 
 
 
@@ -106,7 +109,12 @@ else{
 
 
 
+<<<<<<< HEAD
 	<form id="panier" onmouseover="affichage('panier')" onmouseout="affichage('panier')" action="/E-commerce/index.php/commandes" method="post" enctype="multipart/form-data">  
+=======
+
+	<form id="panier" onmouseover="affichage('panier')" onmouseout="affichage('panier')" action="../static/controllers/users.php" method="post" enctype="multipart/form-data">
+>>>>>>> d9e1226175716e15bf78e5ad33ad8c813edf7d56
 
 <?php  echo
 		 '<table class="table">
@@ -116,11 +124,17 @@ else{
 		  <tbody id="cart-tablebody">
 		  </tbody>
 		</table>
-        
+
 		<p>Sous total : <span class="subtotal"></span>€</p>
 
+<<<<<<< HEAD
 		<button id="confirm-command">Passer la commande</button>   
 	</form>'
+=======
+		<button id="confirm-command">Passer la commande</button>
+	</form>
+
+>>>>>>> d9e1226175716e15bf78e5ad33ad8c813edf7d56
 
 
 
@@ -132,4 +146,3 @@ else{
 		<?php
 
 		?>
-

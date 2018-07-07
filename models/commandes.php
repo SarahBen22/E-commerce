@@ -8,11 +8,11 @@ class CommandesModel extends Model {
 		private $num_commande;
 		private $date_de_commande;
 		private $id_client;
-		private $quantite;
 
 
 
-		public function createOne ($num_commande, $date_de_commande, $id_client,$quantite){
+
+		public function createOne ($num_commande, $date_de_commande, $id_client){
 
 		$db=parent::connect();
 
@@ -24,7 +24,7 @@ class CommandesModel extends Model {
 
 
 		 if (empty($data)) {// si rien ds le 1
-				$sql = 'INSERT INTO commandes VALUES(0, "$num_commandes","$date_de_commande","$id_client","$quantite")';
+				$sql = 'INSERT INTO commandes VALUES(0, "$num_commandes","$date_de_commande","$id_client")';
 				$req= $db->prepare($sql) or die('Erreur SQL !'.$sql.'<br />'.mysql_error());
 				 $req->execute();
 
@@ -41,7 +41,10 @@ class CommandesModel extends Model {
 
 		$db=parent::connect();
 
-		$sql = "select * from commandes INNER JOIN produits on commandes.quantite = produits.id";
+		$sql = "select * from commandes
+		LEFT JOIN profil_client on commandes.id_client = profil_client.id
+		LEFT JOIN panier on commandes.id= panier.id_commande
+		LEFT JOIN produits on panier.id_produit= produits.id";// vu qu'il y a un select all alors on recup l info a travers les id
 		$query = $db -> prepare($sql);
 		$query -> execute();
 		$commandesList= $query -> fetchAll();
@@ -54,7 +57,7 @@ class CommandesModel extends Model {
 	  public function num_commande() { return $this->num_commande; }
 	  public function date_de_commande() { return $this->date_de_commande; }
 		public function id_client() { return $this->id_client;}
-		public function quantite() { return $this->quantite;}
+
 
 
 		// SETTERS // pour assigner des valeurs aux attributs
@@ -85,12 +88,7 @@ class CommandesModel extends Model {
 
 			}
 
-			public function setQuantite( $quantite ){
-		    if(is_int($quantite)){
-		      $this->quantite = $quantite;
-				}
 
-		  }
 
 
 		//UPDATE
@@ -106,12 +104,12 @@ class CommandesModel extends Model {
 					return '<p class="red">La commande n\'a pas été enregistré correctement.</p>';
 				}
 
-				$sql= "UPDATE comm SET num_commande = :num_commande, date_de_commande = :date_de_commande, id_client = :id_client, quantite = :quantite WHERE id=".$comm->id();
+				$sql= "UPDATE comm SET num_commande = :num_commande, date_de_commande = :date_de_commande, id_client = :id_client WHERE id=".$comm->id();
 				$query= $db -> prepare ($sql);
 				$query->bindValue(':num_commande', $comm->num_commande());
 				$query->bindValue(':date_de_commande', $comm->date_de_commande());
 				$query->bindValue(':id_client', $comm->id_client());
-				$query->bindValue(':quantite', $comm->quantite());
+
 
 
 
