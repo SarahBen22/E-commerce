@@ -11,7 +11,7 @@ if (isset($_POST['connexion']) && $_POST['connexion'] == 'Connexion') {// isset=
          'adresse_postale' => "",'telephone' => "",'pseudo' => "",'mdp' => "",'mail' =>"",'admin' => "no"]);
 				$client= $client->getByData($_POST['pseudo']);
 
-		if ($client && $_POST['mdp']== $client-> mdp()){
+		if ($client && password_verify($_POST['mdp'], $client->mdp())){
 			$_SESSION['pseudo'] = $client->pseudo();
 	    $_SESSION['mail'] = $client->mail();
 	    $_SESSION['admin'] = $client->admin();
