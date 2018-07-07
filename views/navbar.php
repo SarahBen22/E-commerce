@@ -24,6 +24,7 @@ else{
 				 <?php
 					echo	'<a class="commandes" href="/E-commerce/index.php/commandes">Commandes</a>';
 				?>
+				
 
 			</div>
 
@@ -32,10 +33,13 @@ else{
 
 		<ul id="menu">
 
-	
 
 		  	<li><a class="home" href="/E-commerce/index.php/home">Home</a></li>
 
+		  	<li>
+		  		<a href="about.asp">Produits</a>
+
+		  	</li>
 
 		  	<li><a href="news.asp">Par Plateforme</a>
 		  		<ul class="plateforme">

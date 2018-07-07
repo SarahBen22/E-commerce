@@ -1,6 +1,8 @@
 <?php
 require_once "views/navbar.php";
+if (isset($_SESSION['id'])){
 ?>
+
 
 
 
@@ -10,7 +12,7 @@ require_once "views/navbar.php";
 
   <tr> <!-- tr= ligne -->
     <th>Numéro client</th> <!--th= colonne-->
-    <td> <?php  echo '.$commande["id_client"].';?> </td> <!-- td= cellule-->
+    <td> <?php  echo '.$id_client.';?> </td> <!-- td= cellule-->
 </tr>
 <hr style="width:50px;">
   <tr>
@@ -32,13 +34,15 @@ echo '
     <td> '.$commande["date_de_commande"].' </td>
     <td> '.$commande["quantite"].' </td>';
   }
+
 ?>
+
 </tr>
 
+<?php 
 
+echo '</tr>';
 
-
-
-
-
-</table>
+echo '</table>';
+}
+?>
