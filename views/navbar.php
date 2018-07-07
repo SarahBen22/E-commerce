@@ -31,11 +31,11 @@ else{
 	<div id="navbar">
 
 		<ul id="menu">
-<<<<<<< HEAD
-		  	<li><a class="home" href="/e-commerce/index.php/home">Home</a></li>
-=======
+
+	
+
 		  	<li><a class="home" href="/E-commerce/index.php/home">Home</a></li>
->>>>>>> d9e1226175716e15bf78e5ad33ad8c813edf7d56
+
 
 		  	<li><a href="news.asp">Par Plateforme</a>
 		  		<ul class="plateforme">
@@ -109,12 +109,10 @@ else{
 
 
 
-<<<<<<< HEAD
-	<form id="panier" onmouseover="affichage('panier')" onmouseout="affichage('panier')" action="/E-commerce/index.php/commandes" method="post" enctype="multipart/form-data">  
-=======
 
-	<form id="panier" onmouseover="affichage('panier')" onmouseout="affichage('panier')" action="../static/controllers/users.php" method="post" enctype="multipart/form-data">
->>>>>>> d9e1226175716e15bf78e5ad33ad8c813edf7d56
+	<form id="panier" onmouseover="affichage('panier')" onmouseout="affichage('panier')" action="/E-commerce/index.php/commandes" method="post" enctype="multipart/form-data">  
+
+
 
 <?php  echo
 		 '<table class="table">
@@ -127,14 +125,13 @@ else{
 
 		<p>Sous total : <span class="subtotal"></span>€</p>
 
-<<<<<<< HEAD
+
 		<button id="confirm-command">Passer la commande</button>   
 	</form>'
-=======
-		<button id="confirm-command">Passer la commande</button>
-	</form>
 
->>>>>>> d9e1226175716e15bf78e5ad33ad8c813edf7d56
+	
+
+
 
 
 

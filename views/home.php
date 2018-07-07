@@ -30,45 +30,38 @@ require_once "navbar.php"
 
 
 
- <div class="platformlink">
+  <div class="platformlink">
 
-  <ul>
+    <ul>
 
-  <div class="row">
+      <div class="row">
 
    
     
 
 
-  <li class="col-sm"> <dl> <dt><a href=""><img src="/E-commerce/img/ps4.jpg"  width= "150px"
-  height= "150px"> </a> <dd> PS4</dd> </dl> </dt> </li>
+        <li class="col-sm"> <dl> <dt><a href=""><img src="/E-commerce/img/ps4.jpg"  width= "150px"
+        height= "150px"> </a> </dt><dd> PS4</dd>   </dl></li>
 
 
-  <li class="col-sm"> <dl> <dt><a href=""><img src="/E-commerce/img/xbox.jpg"  width= "150px"
-  height= "150px"></a> <dd>  XBOX ONE</dd> </dl> </dt> </li>
+        <li class="col-sm"> <dl> <dt><a href=""><img src="/E-commerce/img/xbox.jpg"  width= "150px"
+        height= "150px"></a> </dt><dd>  XBOX ONE</dd>  </dl> </li>
 
-  <li class="col-sm"> <dl> <dt><a href=""><img src="/E-commerce/img/pc.jpg"  width= "150px"
-  height= "150px"></a> <dd> PC</dd> </dl> </dt> </li>
-
-
-  <li class="col-sm"> <dl> <dt><a href=""><img src="/E-commerce/img/nintendo.jpg"  width= "150px"
-  height= "150px"></a> <dd>  SWITCH</dd> </dl> </dt> </li>
+        <li class="col-sm"> <dl> <dt><a href=""><img src="/E-commerce/img/pc.jpg"  width= "150px"
+        height= "150px"></a> </dt><dd> PC</dd>  </dl> </li>
 
 
+        <li class="col-sm"> <dl> <dt><a href=""><img src="/E-commerce/img/nintendo.jpg"  width= "150px"
+        height= "150px"></a> </dt><dd>  SWITCH</dd>  </dl> </li>
 
 
-</div>
+    </div>
 
 
   </ul>
 
 
-
-
 </div>
-
-
-
 
 
 
