@@ -212,10 +212,10 @@ else{
 		$db=parent::connect();
 
 		// On teste d'abord si l'utilisateur existe déjà ou si il est vide
-		if($this->exists($client->nom_client())){
-			return '<p class="red">Le nom d\'utilisateur '.$client->nom_client().' est déjà utilisé.</p>';
+		if($this->exists($client->pseudo())){
+			return '<p class="red">Le nom d\'utilisateur '.$client->pseudo().' est déjà utilisé.</p>';
 		}
-		elseif($client->nom_client() == ''){
+		elseif($client->pseudo() == ''){
 			return '<p class="red">Le nom d\'utilisateur est vide.</p>';
 		}
 
@@ -240,8 +240,21 @@ else{
 		}
 	}
 
+// la fonction exist sert à voir si l utilisateur existe dejà
+  public function exists($data){
+         $db=parent::connect();
 
+         if(is_string($data)){
+             $sql = "SELECT * FROM profil_client WHERE pseudo ='".$data."'";
+             $query = $db->prepare($sql);
+             $query ->execute();
+             $listClient = $query->fetchAll();
 
+             return !empty($listClient); // Retourn Vrai si un Client avec le nom $data existe
+         }
+
+         return false;
+     }
 
   // DELETE
   	public function delete($data){

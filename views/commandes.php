@@ -34,16 +34,14 @@ echo '
     <td> '.$commande["date_de_commande"].' </td>
     <td> '.$commande["quantite"].' </td>';
   }
-<<<<<<< HEAD
-=======
 ?>
 
 </tr>
 
->>>>>>> 9787d56b49fb3c5d84ae7e3c25c2c86040857d30
-
+<?php
 echo '</tr>';
 
 echo '</table>';
+
 }
 ?>

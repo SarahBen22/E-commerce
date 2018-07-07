@@ -280,7 +280,7 @@ form#panier {
     padding: 0;
 
     text-align: center;
-    
+
 }
 
 
@@ -562,8 +562,7 @@ a{
 
 }
 
-<<<<<<< HEAD
-th, td  {
+.tableau th, td {
   border: 1px solid black;
 }
 

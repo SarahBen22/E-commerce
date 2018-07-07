@@ -35,11 +35,7 @@ else{
 
 		<ul id="menu">
 
-<<<<<<< HEAD
-=======
-	
 
->>>>>>> 90cba50d6b99aec4eb00ad2412dc69a4d9c6c47f
 		  	<li><a class="home" href="/E-commerce/index.php/home">Home</a></li>
 
 
@@ -116,7 +112,7 @@ else{
 
 
 
-	<form id="panier" onmouseover="affichage('panier')" onmouseout="affichage('panier')" action="/E-commerce/index.php/commandes" method="post" enctype="multipart/form-data">  
+	<form id="panier" onmouseover="affichage('panier')" onmouseout="affichage('panier')" action="/E-commerce/index.php/commandes" method="post" enctype="multipart/form-data">
 
 
 
@@ -132,10 +128,10 @@ else{
 		<p>Sous total : <span class="subtotal"></span>€</p>
 
 
-		<button id="confirm-command">Passer la commande</button>   
+		<button id="confirm-command">Passer la commande</button>
 	</form>'
 
-	
+
 
 
 
