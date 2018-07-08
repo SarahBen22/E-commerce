@@ -5,7 +5,9 @@
 		<img id="logo" src="/E-commerce/img/arcade-logo.png">
 
 				<?php
+		if ($_SESSION){
 			echo	'<a class="moncompte" href="/E-commerce/index.php/profil_client">Mon Compte</a>';
+}
 		?>
 
 		<?php
@@ -22,9 +24,12 @@ else{
 		?>
 
 				 <?php
+
+if ($_SESSION){
 					echo	'<a class="commandes" href="/E-commerce/index.php/commandes">Commandes</a>';
+}
 				?>
-				
+
 
 			</div>
 
@@ -65,13 +70,13 @@ else{
 
 
 					</li>
-					
+
 				</ul>
 		  	</li>
 
-		  
 
-		  
+
+
 		  	<li><a href="about.asp">Meilleurs Ventes</a></li>
 		  	<li><a href="about.asp">Mieux Notés</a></li>
 		  	<li><a href="about.asp">Offres Spéciales</a></li>
