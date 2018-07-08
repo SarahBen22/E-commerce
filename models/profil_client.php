@@ -223,7 +223,7 @@ class profil_clientModel extends Model {
     $query->bindValue(':telephone', $client->telephone());
     $query->bindValue(':mail', $client->mail());
     $query->bindValue(':admin', $client->admin());
-    $query->bindValue(':date_de_naissance',date("Y-m-d"));
+    $query->bindValue(':date_de_naissance',$client->date_de_naissance());
 
     $result = $query -> execute ();
 

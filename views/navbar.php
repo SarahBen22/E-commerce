@@ -2,7 +2,7 @@
 
 	<div id="bandeau">
 
-		<img id="logo" src="/E-commerce/img/arcade-logo.png">
+		<img id="logo" src="/E-commerce/img/playerstore6.png">
 
 				<?php
 		if ($_SESSION){
