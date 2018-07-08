@@ -166,6 +166,7 @@ a.deconnexion{
   margin-left: -12px;
   margin-top: -7px;
   box-sizing: content-box;
+
 }
 
 #navbar {
@@ -582,7 +583,10 @@ width: 100%;
 
 }
 
-.tableau th, td {
+
+
+.tableau th, .tableau td  {
+
   border: 1px solid black;
 }
 
@@ -798,7 +802,7 @@ input[type='password']:focus {
   align-items: center;
 }
 
-.btn {
+.coutour .btn {
   font-size: 16px;
   width: 163px;
   height: 48px;
@@ -809,23 +813,26 @@ input[type='password']:focus {
   border-radius: 23px;
 }
 
-.back-btn {
+ 
+.coutour .back-btn {
   color: #f62f5e;
   background: #fff;
 }
-
-.next-btn {
+ 
+.coutour .next-btn {
   color: #fff;
   background: #f62f5e;
 }
-
-.btn:focus {
+ 
+.coutour .btn:focus {
   outline: none;
 }
+ 
+.coutour .btn:hover {
 
-.btn:hover {
   transform: scale(1.1);
 }
+
 
 .blue-border {
   border: 1px solid rgb(110, 178, 251);
@@ -838,5 +845,46 @@ input[type='password']:focus {
 .gro
 {
 font-size: 40px;
+}
+
+
+/*-------------------------------------PAGE PRODUITS---------------------------------*/
+
+
+#productdisplay {
+  width: 100%;
+  height: auto;
+  position: relative;
+  margin: auto;
+  display: block;
+  text-align: center;
+  background: linear-gradient( #000000 , #202960 50% , #000000 100% );
+}
+
+
+.card {
+  height: 310px;
+  width: 200px;
+  display: inline-block;
+  margin: 30px 10px;
+  position: relative;
+  box-sizing: content-box;
 
 }
+
+#productdisplay table {
+  margin: 5px auto;
+  width: 100%;
+}
+
+#productdisplay #logo {
+  height: 52px;
+  width: 95px;
+  margin-left: -697px;
+  margin-top: -7px;
+  box-sizing: content-box;
+
+  
+}
+
+

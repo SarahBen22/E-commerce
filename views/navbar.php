@@ -42,9 +42,9 @@ if ($_SESSION){
 		  	<li><a class="home" href="/E-commerce/index.php/home">Home</a></li>
 
 		  	<li>
-		  		<a href="about.asp">Produits</a>
+		  		<a href="/E-commerce/index.php/produits">Produits</a>
 		  		<ul id="produits">
-					<li><a href="#">Par Plateforme</a>
+					<li><a href="">Par Plateforme</a>
 						<ul class="plateforme">
 							<li><a href="#">PC</a></li>
 							<li><a href="#">XBOX ONE</a></li>
@@ -54,7 +54,7 @@ if ($_SESSION){
 					</li>
 
 
-					<li><a href="#">Par Genre</a>
+					<li><a href="">Par Genre</a>
 
 						<ul class="genre">
 							<li><a href="#">AVENTURE</a></li>
@@ -76,13 +76,11 @@ if ($_SESSION){
 
 
 
-
-		  	<li><a href="about.asp">Meilleurs Ventes</a></li>
-		  	<li><a href="about.asp">Mieux Notés</a></li>
-		  	<li><a href="about.asp">Offres Spéciales</a></li>
-		  	<li><a href="about.asp">Goodies</a></li>
-
-
+		  
+		  	<li><a href="">Meilleurs Ventes</a></li>
+		  	<li><a href="">Mieux Notés</a></li>
+		  	<li><a href="">Offres Spéciales</a></li>
+		  	<li><a href="">Goodies</a></li>
 
 
 		  	<li class="panier"  onmouseover="affichage('panier')" onmouseout="affichage('panier')">
