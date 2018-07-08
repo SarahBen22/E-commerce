@@ -5,7 +5,9 @@
 		<img id="logo" src="/E-commerce/img/playerstore6.png">
 
 				<?php
+		if ($_SESSION){
 			echo	'<a class="moncompte" href="/E-commerce/index.php/profil_client">Mon Compte</a>';
+}
 		?>
 
 		<?php
@@ -22,9 +24,12 @@ else{
 		?>
 
 				 <?php
+
+if ($_SESSION){
 					echo	'<a class="commandes" href="/E-commerce/index.php/commandes">Commandes</a>';
+}
 				?>
-				
+
 
 			</div>
 
@@ -65,19 +70,17 @@ else{
 
 
 					</li>
-					
+
 				</ul>
 		  	</li>
 
-		  
+
 
 		  
 		  	<li><a href="">Meilleurs Ventes</a></li>
 		  	<li><a href="">Mieux Notés</a></li>
 		  	<li><a href="">Offres Spéciales</a></li>
 		  	<li><a href="">Goodies</a></li>
-
-
 
 
 		  	<li class="panier"  onmouseover="affichage('panier')" onmouseout="affichage('panier')">
@@ -121,7 +124,7 @@ else{
 
 
 
-	<form id="panier" onmouseover="affichage('panier')" onmouseout="affichage('panier')" action="/E-commerce/index.php/commandes" method="post" enctype="multipart/form-data">  
+	<form id="panier" onmouseover="affichage('panier')" onmouseout="affichage('panier')" action="/E-commerce/index.php/commandes" method="post" enctype="multipart/form-data">
 
 
 
@@ -137,10 +140,10 @@ else{
 		<p>Sous total : <span class="subtotal"></span>€</p>
 
 
-		<button id="confirm-command">Passer la commande</button>   
+		<button id="confirm-command">Passer la commande</button>
 	</form>'
 
-	
+
 
 
 

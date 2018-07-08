@@ -11,11 +11,16 @@ if (isset($_POST['inscription']) && $_POST['inscription'] == 'Inscription') {// 
 			}
 			else {
 				$client= new profil_clientModel (['id' => 0 , 'civilite' =>"",'nom' =>"",'prenom' => "",'date_de_naissance' =>"",
-         'adresse_postale' => "",'telephone' => "",'pseudo' => $_POST['pseudo'],'mdp' => $_POST['mdp'],'mail' =>$_POST['mail'],'admin' => "no"]);
+         'adresse_postale' => "",'telephone' => "",'pseudo' => $_POST['pseudo'],'mdp' => $_POST['mdp'],'mail' =>"",'admin' => "no"]);
 				$erreur= $client-> createOne($client);
+			  $client= $client->getByData($_POST['pseudo']);
 
 				if ($erreur==0)
-				$_SESSION['pseudo'] = $_POST['pseudo'];
+				$_SESSION['pseudo'] = $client->pseudo();
+		    $_SESSION['mail'] = $client->mail();
+				 $_SESSION['id'] = $client->id();
+		    $_SESSION['admin'] = $client->admin();
+				header ("location: ./profil_client");
 			}
 	 }
 	 else {

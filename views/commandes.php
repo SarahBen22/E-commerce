@@ -12,7 +12,7 @@ if (isset($_SESSION['id'])){
 
   <tr> <!-- tr= ligne -->
     <th>Numéro client</th> <!--th= colonne-->
-    <td> <?php  echo '.$id_client.';?> </td> <!-- td= cellule-->
+    <td> <?php  echo $id_client;?> </td> <!-- td= cellule-->
 </tr>
 <hr style="width:50px;">
   <tr>
@@ -34,15 +34,14 @@ echo '
     <td> '.$commande["date_de_commande"].' </td>
     <td> '.$commande["quantite"].' </td>';
   }
-
 ?>
 
 </tr>
 
-<?php 
-
+<?php
 echo '</tr>';
 
 echo '</table>';
+
 }
 ?>
