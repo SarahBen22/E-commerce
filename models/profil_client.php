@@ -171,8 +171,8 @@ class profil_clientModel extends Model {
     }
   }
 
-  public function setDate_de_naissance( $Date_de_naissance){
-    $this->Date_de_naissance = $Date_de_naissance;
+  public function setDate_de_naissance( $date_de_naissance){
+    $this->date_de_naissance = $date_de_naissance;
   }
 
 

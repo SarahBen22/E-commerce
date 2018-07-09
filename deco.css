@@ -118,7 +118,7 @@ a.moncompte:hover {
 	color: gold;
 }
 
-a.inscription{
+a.inscription {
 
   color: white;
 	float: right;
@@ -126,7 +126,11 @@ a.inscription{
 	margin-right: 30px;
 }
 
-a.connexion{
+a.inscription:hover {
+  color: gold;
+}
+
+a.connexion {
 
   color: white;
 	float: right;
@@ -134,8 +138,11 @@ a.connexion{
 	margin-right: 30px;
 }
 
+a.connexion:hover {
+  color: gold;
+}
 
-a.commandes{
+a.commandes {
 
   color: white;
 	float: right;
@@ -143,12 +150,20 @@ a.commandes{
 	margin-right: 30px;
 }
 
-a.deconnexion{
+a.commandes:hover {
+  color: gold;
+}
+
+a.deconnexion {
 
   color: white;
 	float: right;
 	line-height: 30px;
 	margin-right: 30px;
+}
+
+a.deconnexion:hover {
+  color: gold;
 }
 
 #bandeau {
@@ -571,17 +586,17 @@ width: 100%;
 
   .tableau
 {
-  width:50%;
+  width:100%;
   margin-top: 11%;
   margin-right: auto;
   margin-left: auto;
-  font-size:40px;
-  border-collapse:separate;
-  border-spacing:50px 5px;
-  border: 2px solid black;
-  background-color: rgb(176, 196, 222);
+  font-size:30px;
+  border-collapse:collapse;
+  border-spacing:30px 5px;
+  text-align: center;
+  background-color: rgb(234, 237, 237);
 
-	color:rgb( 129, 20, 83);
+	color:black;
 
 }
 
@@ -589,10 +604,34 @@ width: 100%;
 
 .tableau th, .tableau td  {
 
-  border: 1px solid black;
+  border-bottom: 2px solid rgb(224, 17, 95);
 }
 
 
+.small{
+
+
+  width: 10%;
+}
+
+.pic{
+
+  width: 65px;
+  height: 75px;
+}
+
+.reduc{
+
+
+  font-size: 25px;
+}
+
+
+#validation{
+
+  position: relative;
+  font-size: 75%;
+}
 /*----------------------------------------PAIEMENT--------------------------------------*/
 
 
@@ -608,6 +647,7 @@ width: 100%;
   align-items: center;
   box-sizing: border-box;
 }
+
 
 .checkout-panel {
   display: flex;
@@ -815,21 +855,21 @@ div[class*='column'] {
   border-radius: 23px;
 }
 
- 
+
 .coutour .back-btn {
   color: #f62f5e;
   background: #fff;
 }
- 
+
 .coutour .next-btn {
   color: #fff;
   background: #f62f5e;
 }
- 
+
 .coutour .btn:focus {
   outline: none;
 }
- 
+
 .coutour .btn:hover {
 
   transform: scale(1.1);
@@ -878,7 +918,3 @@ font-size: 40px;
   margin: 5px auto;
   width: 100%;
 }
-
-
-
-
