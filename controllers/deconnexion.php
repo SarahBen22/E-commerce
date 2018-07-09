@@ -4,6 +4,7 @@
     session_destroy();
     header('Location: ./home');
     exit();
-
-    require_once "views/layout.php";
+    
+require_once "controllers/panier.php";
+require_once "views/layout.php";
     ?>

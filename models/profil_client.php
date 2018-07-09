@@ -60,7 +60,7 @@ class profil_clientModel extends Model {
   public function getByData ($data){
 
     $db=parent::connect();
-
+// pour trouver l objet avc le pseudo
     $sql= "select * from profil_client WHERE pseudo= :pseudo";
     $query = $db -> prepare($sql);
     $query->bindValue(':pseudo', $data);
@@ -79,7 +79,7 @@ class profil_clientModel extends Model {
       }
       else{
 
-        // On enregistre les valeurs dans l'instance actuelle
+        // On enregistre les valeurs dans l'objet actuel pour pouvoir renvoyer mon objet à la ligne 94
         $this->setId($profil_client['id']);
         $this->setNom($profil_client['nom']);
         $this->setMdp($profil_client['mdp']);
@@ -97,7 +97,7 @@ class profil_clientModel extends Model {
       }
     }
     else{
-
+// si on le fait 2 fois c pck il y a 2 requetes (une par rapport au pseudo et une au mail)
       $this->setId($profil_client['id']);
       $this->setNom($profil_client['nom']);
       $this->setMdp($profil_client['mdp']);
@@ -129,7 +129,7 @@ class profil_clientModel extends Model {
   }
 
 
-  // GETTERS //
+  // GETTERS // obtenir ce qu on a ds l objet
   public function id() { return $this->id; }
   public function civilite() { return $this->civilite; }
   public function nom() { return $this->nom; }
@@ -216,7 +216,7 @@ class profil_clientModel extends Model {
     $sql= "UPDATE profil_client SET  civilite= :civilite, nom = :nom, prenom = :prenom, adresse_postale= :adresse_postale, telephone= :telephone, mail= :mail, date_de_naissance= :date_de_naissance, admin= :admin WHERE id=".$client->id();
     $query= $db -> prepare ($sql);
 
-    $query->bindValue(':civilite', $client->civilite());
+    $query->bindValue(':civilite', $client->civilite());// bindvalue= valeur qui permet de remplacer un objet ds la requete
     $query->bindValue(':nom', $client->nom());
     $query->bindValue(':prenom', $client->prenom());
     $query->bindValue(':adresse_postale', $client->adresse_postale());
