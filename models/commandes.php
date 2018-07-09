@@ -53,12 +53,14 @@ class CommandesModel extends Model {
 	}
 
 public function getByIdClient ($id){
+
 	$db=parent::connect();
+
 	$sql = "select * from commandes
 	LEFT JOIN profil_client on commandes.id_client = profil_client.id
 	LEFT JOIN panier on commandes.id= panier.id_commande
 	LEFT JOIN produits on panier.id_produit= produits.id
-	WHERE commandes.id=".$id;
+	WHERE commandes.id_client=".$id;
 	$query = $db -> prepare($sql);
 	$query -> execute();
 	$commandesList= $query -> fetchAll();

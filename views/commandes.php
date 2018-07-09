@@ -1,47 +1,83 @@
 <?php
 require_once "views/navbar.php";
 if (isset($_SESSION['id'])){
-?>
+  ?>
+
+  <table class="tableau">
+
+    <tr> <!-- tr= ligne -->
+      <th class="reduc">Numéro client</th> <!--th= colonne-->
+      <td> <?php  echo $id_client;?> </td>
+      <td></td>
+      <td></td><!-- td= cellule-->
+    </tr>
+    <hr style="width:50px;">
 
 
 
+    <?php
+    $calcul= 0;
+    foreach ($CommandesListView as  $commande) {
+
+      echo '
+
+      <tr>
+
+      <th class="reduc">Date de commande</th>
+      <td > '.$commande["date_de_commande"].' </td>
+      <td></td>
+      <td></td>
+      </tr>
+      <tr>
+      <th class="reduc">Numéro de commande</th>
+      <td class="small"> '.$commande["num_commande"].' </td>
+      <td></td>
+      <td></td>
+      </tr>
+      </tr>
+
+        <th class="reduc">Article</th>
+        <th class="reduc">Nom</th>
+        <th class="reduc">Prix Unitaire</th>
+        <th class="reduc">Quantité</th>
+      </tr>
+
+      <td > <img class= "pic" '.$commande["jaquettes"].'>  </td>
+      <td> '.$commande["Titre"].' </td>
+      <td> '.$commande["prix"].'€ </td>
+      <td> '.$commande["quantite"].' </td></tr>';
+
+      $calcul= ($commande["prix"] * $commande["quantite"]) + $calcul; // calcule pour le montant total
 
 
+}
 
-<table class="tableau">
 
-  <tr> <!-- tr= ligne -->
-    <th>Numéro client</th> <!--th= colonne-->
-    <td> <?php  echo $id_client;?> </td> <!-- td= cellule-->
-</tr>
-<hr style="width:50px;">
-  <tr>
-  <th>Date de commande</th>
-  <th>Numéro de commande</th>
-  <th>Article</th>
-  <th>Prix Unitaire</th>
-  <th>Quantité</th>
-</tr>
+    echo '
+    <tr>
+    <td></td>
+    <td></td>
+
+    <th>Montant total</th>
+    <td>'.$calcul.'€</td>
+    </tr>
+
+
 
 <tr>
-  <?php
-  foreach ($CommandesListView as  $commande) {
+  <td></td>  <td></td><td></td>
+<td><a href= "/E-commerce/index.php/paiement"><input type="submit" id= "validation" name="Validation" value="Validation" >
+</a></td>
 
-echo '
-    <td> '.$commande["date_de_commande"].' </td>
-    <td> '.$commande["num_commande"].' </td>
-    <td> '.$commande["Titre"].' </td>
-    <td> '.$commande["date_de_commande"].' </td>
-    <td> '.$commande["quantite"].' </td>';
-  }
-?>
 
-</tr>
+  </tr>
+    ';
 
-<?php
-echo '</tr>';
 
-echo '</table>';
+
+    echo '</tr>';
+
+    echo '</table>';
 
 }
 ?>

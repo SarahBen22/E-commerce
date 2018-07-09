@@ -166,6 +166,8 @@ a.deconnexion{
   margin-left: -12px;
   margin-top: -7px;
   box-sizing: content-box;
+  position: absolute;
+  left: 0;
 
 }
 
@@ -569,17 +571,17 @@ width: 100%;
 
   .tableau
 {
-  width:50%;
+  width:100%;
   margin-top: 11%;
   margin-right: auto;
   margin-left: auto;
-  font-size:40px;
-  border-collapse:separate;
-  border-spacing:50px 5px;
-  border: 2px solid black;
-  background-color: rgb(176, 196, 222);
+  font-size:30px;
+  border-collapse:collapse;
+  border-spacing:30px 5px;
+  text-align: center;
+  background-color: rgb(234, 237, 237);
 
-	color:rgb( 129, 20, 83);
+	color:black;
 
 }
 
@@ -587,10 +589,34 @@ width: 100%;
 
 .tableau th, .tableau td  {
 
-  border: 1px solid black;
+  border-bottom: 2px solid rgb(224, 17, 95);
 }
 
 
+.small{
+
+
+  width: 10%;
+}
+
+.pic{
+
+  width: 65px;
+  height: 75px;
+}
+
+.reduc{
+
+
+  font-size: 25px;
+}
+
+
+#validation{
+
+  position: relative;
+  font-size: 75%;
+}
 /*----------------------------------------PAIEMENT--------------------------------------*/
 
 
@@ -606,6 +632,7 @@ width: 100%;
   align-items: center;
   box-sizing: border-box;
 }
+
 
 .checkout-panel {
   display: flex;
@@ -731,7 +758,7 @@ width: 100%;
   margin-top: 20px;
 }
 
-input[type='radio'] {
+.contour input[type='radio'] {
   display: inline-block;
 }
 
@@ -759,8 +786,8 @@ div[class*='column'] {
   width: 382px;
 }
 
-input[type='text'],
-input[type='password'] {
+.contour input[type='text'],
+.contour input[type='password'] {
   font-size: 16px;
   width: 100%;
   height: 50px;
@@ -772,8 +799,8 @@ input[type='password'] {
   outline: none;
 }
 
-input[type='text']:focus,
-input[type='password']:focus {
+.contour input[type='text']:focus,
+.contour input[type='password']:focus {
   border-color: rgb(119, 219, 119);
 }
 
@@ -813,21 +840,21 @@ input[type='password']:focus {
   border-radius: 23px;
 }
 
- 
+
 .coutour .back-btn {
   color: #f62f5e;
   background: #fff;
 }
- 
+
 .coutour .next-btn {
   color: #fff;
   background: #f62f5e;
 }
- 
+
 .coutour .btn:focus {
   outline: none;
 }
- 
+
 .coutour .btn:hover {
 
   transform: scale(1.1);
@@ -876,15 +903,3 @@ font-size: 40px;
   margin: 5px auto;
   width: 100%;
 }
-
-#productdisplay #logo {
-  height: 52px;
-  width: 95px;
-  margin-left: -697px;
-  margin-top: -7px;
-  box-sizing: content-box;
-
-  
-}
-
-
