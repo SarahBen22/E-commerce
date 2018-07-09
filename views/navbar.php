@@ -76,7 +76,7 @@
 
 
 
-		<li><a href="">Meilleurs Ventes</a></li>
+		<li><a href="">Meilleures Ventes</a></li>
 		<li><a href="">Mieux Notés</a></li>
 		<li><a href="">Offres Spéciales</a></li>
 		<li><a href="">Goodies</a></li>
