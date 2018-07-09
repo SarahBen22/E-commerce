@@ -22,6 +22,7 @@ if (true) {// isset= permet de voir si une variable est définie
   }
 }
 
+require_once "controllers/panier.php";
 //$content= charger la vue qui correspond au controller dans le layout
 $content = "views/profil_client.php";
 require_once "views/layout.php";

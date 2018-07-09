@@ -39,7 +39,7 @@ if (isset($_POST['connexion']) && $_POST['connexion'] == 'Connexion') {// isset=
 	}
 }
 
-
+require_once "controllers/panier.php";
 $content = "views/connexion.php";
 require_once "views/layout.php";
 

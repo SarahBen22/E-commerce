@@ -9,6 +9,7 @@ $id_client= $_SESSION['id'];
 $commandes =new CommandesModel();
 $CommandesListView= $commandes->getByIdClient((int)$_SESSION['id']);
 }
+require_once "controllers/panier.php";
 $content = "views/commandes.php";
 require_once "views/layout.php";
 

@@ -28,7 +28,7 @@ if (isset($_POST['inscription']) && $_POST['inscription'] == 'Inscription') {// 
 	 }
 }
 
-
+require_once "controllers/panier.php";
 $content = "views/inscription.php";
 require_once "views/layout.php";
 
