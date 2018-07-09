@@ -166,6 +166,8 @@ a.deconnexion{
   margin-left: -12px;
   margin-top: -7px;
   box-sizing: content-box;
+  position: absolute;
+  left: 0;
 
 }
 
@@ -731,7 +733,7 @@ width: 100%;
   margin-top: 20px;
 }
 
-input[type='radio'] {
+.contour input[type='radio'] {
   display: inline-block;
 }
 
@@ -759,8 +761,8 @@ div[class*='column'] {
   width: 382px;
 }
 
-input[type='text'],
-input[type='password'] {
+.contour input[type='text'],
+.contour input[type='password'] {
   font-size: 16px;
   width: 100%;
   height: 50px;
@@ -772,8 +774,8 @@ input[type='password'] {
   outline: none;
 }
 
-input[type='text']:focus,
-input[type='password']:focus {
+.contour input[type='text']:focus,
+.contour input[type='password']:focus {
   border-color: rgb(119, 219, 119);
 }
 
@@ -877,14 +879,6 @@ font-size: 40px;
   width: 100%;
 }
 
-#productdisplay #logo {
-  height: 52px;
-  width: 95px;
-  margin-left: -697px;
-  margin-top: -7px;
-  box-sizing: content-box;
 
-  
-}
 
 
