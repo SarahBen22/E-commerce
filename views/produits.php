@@ -24,11 +24,12 @@ echo '<table>
 			<th> PEGI </th>
 		</tr>
 		<tr>
-			<td>'; echo $produit["nom_console"]; echo'</td>
-			<td>'; echo $produit["annee_de_sortie"]; echo'</td>
-			<td>'; echo $produit["stock"]; echo'</td>
-			<td>'; echo $produit["prix"]; echo'</td>
-			<td>'; echo $produit["id_pegi"]; echo'</td>
+
+			<td> '.$produit["nom_console"].'</td>
+			<td>'.$produit["annee_de_sortie"].'</td>
+			<td>'.$produit["stock"].'</td>
+			<td>'.$produit["prix"].'€</td>
+			<td>'.$produit["age"].'</td>
 
 
 		</tr>
@@ -48,8 +49,8 @@ require_once "views/footer.php";
 ?>
 </body>
 
-<?php  
-/* 
+<?php
+/*
 
 echo "</br>";
 
@@ -72,7 +73,7 @@ echo "</br>";
 
 
 echo $produit["id_pegi"];
-echo "</br>"; 
+echo "</br>";
 
 */
 
