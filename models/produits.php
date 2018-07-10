@@ -43,7 +43,9 @@ class ProduitsModel extends Model {
 
 		$db=parent::connect();
 
-		$sql = "select * from produits INNER JOIN consoles on produits.id_console= consoles.id ";
+		$sql = "select * from produits
+		LEFT JOIN consoles on produits.id_console= consoles.id
+		LEFT JOIN pegi on produits.id_pegi= pegi.id ";
 		$query = $db -> prepare($sql);
 		$query -> execute();
 		$produitsList= $query -> fetchAll();

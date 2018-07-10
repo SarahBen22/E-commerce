@@ -77,7 +77,7 @@
 
 
 
-		<li><a href="">Meilleurs Ventes</a></li>
+		<li><a href="">Meilleures Ventes</a></li>
 		<li><a href="">Mieux Notés</a></li>
 		<li><a href="">Offres Spéciales</a></li>
 		<li><a href="">Goodies</a></li>
@@ -92,7 +92,7 @@
 				<dd>
 					<div class="dropdown" >
 						<div id="cart" >
-							<p><span id="in-cart-items-num">0</span> Article(s)</p>
+							<p><span id="in-cart-items-num"> <?php echo $count; ?> </span> Article(s)</p>
 						</div>
 
 
