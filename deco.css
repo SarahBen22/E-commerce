@@ -446,7 +446,7 @@ li.col-sm {
 
 
 
-/*------------------------------footer---------------------------------*/
+/*------------------------------FOOTER---------------------------------*/
 
 .footerlimit {
 
@@ -494,25 +494,40 @@ li.col-sm {
 
 
 
-/*--------------------------forme inscription---------------------------*/
+/*----------------------------------FORMULAIRES------------------------------------------*/
+
+.form-container {
+  margin-top: 50px;
+  position: relative;
+  width: 100%;
+  
+  background: linear-gradient( #000000 , #202960 50% , #000000 100% );
+  box-sizing: content-box;
+  padding-top: 50px;
+  padding-bottom: 50px;
+ 
+}
+
 
 input.civilite  {
   width: 50px;
-
   margin: auto 25px;
 }
 
-.forme{
+input#date {
+  background-color: white; 
+}
 
+.forme {
+  
   text-align: center;
-  margin-top: 8%;
-  border: 1px solid rgba(233, 197, 215, 1);
+ 
   width: 40%;
-  margin-right:auto;
-  margin-left: auto;
-  background-color:rgba(233, 197, 215, 0.7);
-  border-radius: 10%;
-
+  margin: auto;
+  background-color: rgba(242, 242, 242, 0.80);
+  border-radius: 3px;
+  border: solid 1px #9d145e;
+  box-shadow: 2px 2px 5px  #9d145e;
 }
 
 .msg{
@@ -521,6 +536,10 @@ text-align: center;
 width: 100%;
 }
 
+h5 {
+  margin-top: 10px;
+  margin-bottom: -1px;
+}
 
 /*----------------------------------------ERROR PAGE--------------------------------------*/
 
@@ -561,26 +580,6 @@ width: 100%;
 
 
 
-/*----------------------------------------CONNEXION--------------------------------------*/
-
-
-#connexion{
-
-
-  background: linear-gradient( #000000 , #202960 50% , #000000 100% );
-  margin-top: 11%;
-  width: 25%;
-  border-radius: 50%;
-	color:rgb( 135,18,81 );
-
-  }
-
-  .msg{
-
-  text-align: center;
-  width: 100%;
-
-  }
 
 /*----------------------------------------COMMANDES--------------------------------------*/
 
