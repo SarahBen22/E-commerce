@@ -474,7 +474,7 @@ li.col-sm {
   display: inline-block;
   width: 180px ;
   height: 170px ;
-  margin: 10px 20px;
+  margin: 10px 20px 0px 20px;
   color: white;
 }
 .footer ul li {
