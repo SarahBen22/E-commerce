@@ -83,6 +83,7 @@
 		<li><a href="">Goodies</a></li>
 
 
+
 		<li class="panier"  onmouseover="affichage('panier')" onmouseout="affichage('panier')">
 			<dl>
 				<dt>

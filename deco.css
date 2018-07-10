@@ -118,7 +118,7 @@ a.moncompte:hover {
 	color: gold;
 }
 
-a.inscription{
+a.inscription {
 
   color: white;
 	float: right;
@@ -126,7 +126,11 @@ a.inscription{
 	margin-right: 30px;
 }
 
-a.connexion{
+a.inscription:hover {
+  color: gold;
+}
+
+a.connexion {
 
   color: white;
 	float: right;
@@ -134,8 +138,11 @@ a.connexion{
 	margin-right: 30px;
 }
 
+a.connexion:hover {
+  color: gold;
+}
 
-a.commandes{
+a.commandes {
 
   color: white;
 	float: right;
@@ -143,12 +150,20 @@ a.commandes{
 	margin-right: 30px;
 }
 
-a.deconnexion{
+a.commandes:hover {
+  color: gold;
+}
+
+a.deconnexion {
 
   color: white;
 	float: right;
 	line-height: 30px;
 	margin-right: 30px;
+}
+
+a.deconnexion:hover {
+  color: gold;
 }
 
 #bandeau {
