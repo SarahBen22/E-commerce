@@ -87,7 +87,7 @@
 		<li class="panier"  onmouseover="affichage('panier')" onmouseout="affichage('panier')">
 			<dl>
 				<dt>
-					<a  href="/E-commerce/index.php/commandes"><img class="basket" src="/E-commerce/img/cart.png" width="35px" height="35px" ></a>
+					<a  href="/E-commerce/index.php/paiement"><img class="basket" src="/E-commerce/img/cart.png" width="35px" height="35px" ></a>
 				</dt>
 
 				<dd>
@@ -114,7 +114,7 @@
 		</ul>
 	</div>
 
-<form id="panier" onmouseover="affichage('panier')" onmouseout="affichage('panier')" action="/E-commerce/index.php/commandes" method="post" enctype="multipart/form-data">
+<form id="panier" onmouseover="affichage('panier')" onmouseout="affichage('panier')" action="/E-commerce/index.php/paiement" method="post" enctype="multipart/form-data">
 
 
 
@@ -158,7 +158,7 @@
 
 		</table>
 
-		<a href= "/E-commerce/index.php/commandes"<button id="confirm-command">Passer la commande</button></a>
+		<a href= "/E-commerce/index.php/paiement"<button id="confirm-command">Passer la commande</button></a>
 		</form>';
 
 
