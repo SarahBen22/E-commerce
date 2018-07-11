@@ -25,7 +25,7 @@ echo '<table>
 		</tr>
 		<tr>
 
-			<td> '.$produit["nom_console"].'</td>
+			<td>'.$produit["nom_console"].'</td>
 			<td>'.$produit["annee_de_sortie"].'</td>
 			<td>'.$produit["stock"].'</td>
 			<td>'.$produit["prix"].'€</td>

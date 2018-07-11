@@ -303,7 +303,7 @@ form#panier {
     right: 0;
     margin-top: 50px;
     max-height: 300px;
-    max-width: 220px;
+    min-width: 220px;
     z-index: 900;
     background-color: rgba(242, 242, 242, 0.80);
     border-radius: 30px 3px 30px 5px;
@@ -349,8 +349,8 @@ form#panier {
 
 .carousel {
     display: flex;
-  	top: 50px;
-    margin-bottom: 100px !important;
+  	top: 65px;
+    margin-bottom: 150px !important;
     margin: 0 auto;
     width:5%;
     height: 300px;
