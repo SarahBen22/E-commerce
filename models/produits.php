@@ -12,9 +12,9 @@ class ProduitsModel extends Model {
 	  private $stock;
 		private $prix;
 		private $id_pegi;
+		private $jaquettes;
 
-
-		public function createOne ($titre, $id_console, $id_jeux, $annee_de_sortie,$stock,$id_pegi){
+		public function createOne ($titre, $id_console, $id_jeux, $annee_de_sortie,$stock,$prix,$id_pegi,$jaquettes){
 
 		$db=parent::connect();
 
@@ -22,11 +22,11 @@ class ProduitsModel extends Model {
 		 $sql = 'SELECT * FROM produits WHERE titre="$titre"';
 		 $req = $db->prepare($sql) or die('Erreur SQL !<br />'.$sql.'<br />'.mysql_error());// voir s il y a une erreur
 		 $result=$req->execute();
-		 $data =$req->fetchAll(); //recup les données
+		 $data =$req->fetchAll(); //recup les données le prepare permet de preparer la requete et eviter des injections SQL
 
 
 		 if (empty($data)) {
-				$sql = 'INSERT INTO produits VALUES(0, "$titre","$id_console","$id_jeux","$annee_de_sortie","$stock","$prix","$id_pegi")';
+				$sql = 'INSERT INTO produits VALUES(0, "$titre","$id_console","$id_jeux","$annee_de_sortie","$stock","$prix","$id_pegi","$jaquettes")';
 				$req= $db->prepare($sql) or die('Erreur SQL !'.$sql.'<br />'.mysql_error());
 				 $req->execute();
 
@@ -43,9 +43,12 @@ class ProduitsModel extends Model {
 
 		$db=parent::connect();
 
-		$sql = "select * from produits
+			 // je veux tous les champs de Produits, le nom de la console, l age du pegi
+		$sql = "select produits.*, consoles.nom_console, pegi.age from produits
 		LEFT JOIN consoles on produits.id_console= consoles.id
 		LEFT JOIN pegi on produits.id_pegi= pegi.id ";
+
+	// les left join représentent les clés étrangères ds la BDD (ils réunissent les infos entre les tables)
 		$query = $db -> prepare($sql);
 		$query -> execute();
 		$produitsList= $query -> fetchAll();
@@ -53,6 +56,50 @@ class ProduitsModel extends Model {
 
 		return $produitsList;
 	}
+
+
+
+	public function get($data){
+
+        $db=parent::connect();
+        // Si in entier est en paramètre on récupère par rapport à l'Id
+        if(is_int($data)){
+            $sql= "SELECT * FROM produits WHERE id = :id";
+            $query= $db -> prepare ($sql);
+            $query->bindValue(':id', $data);
+        }
+
+        // Si une chaine de charactères est en paramètre on récupère par rapport au nom du produit
+        else if (is_string($data)){
+            $sql= "SELECT * FROM produits WHERE Titre= :Titre";
+            $query= $db -> prepare ($sql);
+            $query->bindValue(':Titre', $data);
+        }
+        else{
+            // Si le paramètre est incorrect on retourne false
+            return 0;
+        }
+
+        $query -> execute ();
+        $result = $query->fetch();
+        if($result && $result['Titre'] != ''){
+            // On enregistre les valeurs dans l'instance actuelle
+            $this->setId($result['id']);
+            $this->setTitre($result['Titre']);
+            $this->setId_console($result['id_console']);
+            $this->setId_jeux($result['id_jeux']);
+            $this->setAnnee_de_sortie($result['annee_de_sortie']);
+            $this->setStock($result['stock']);
+            $this->setPrix($result['prix']);
+            $this->setId_pegi($result['id_pegi']);
+						$this->setId_pegi($result['jaquettes']);
+
+            return $this;
+        }
+        else{
+            return 0; // Si il n'y a pas de resultat on retourne false
+        }
+    }
 
 	// GETTERS //
 	  public function id() { return $this->id; }
@@ -63,7 +110,7 @@ class ProduitsModel extends Model {
 	  public function stock() { return $this->stock; }
 		public function prix() { return $this->prix; }
 	  public function id_pegi() { return $this->id_pegi; }
-
+	  public function jaquettes() { return $this->jaquettes; }
 
 
 
@@ -117,6 +164,12 @@ class ProduitsModel extends Model {
 		    }
 		}
 
+
+		public function setJaquettes( $jaquettes ){
+			if(is_string($jaquettes )){
+				$this->jaquettes  = $jaquettes ;
+			}
+	}
 		//UPDATE
 			public function update(ProduitsModel $prod){
 
@@ -139,7 +192,7 @@ class ProduitsModel extends Model {
 				$query->bindValue(':stock ', $prod->stock());
 				$query->bindValue(':prix ', $prod->prix());
 				$query->bindValue(':id_pegi', $prod->id_pegi());
-
+				$query->bindValue(':jaquettes', $prod->jaquettes());
 
 				$result = $query -> execute ();
 

@@ -2,79 +2,61 @@
 require_once "views/navbar.php";
 ?>
 
-
-
 <body id="productdisplay">
 
-<?php
-foreach ($ProduitsListView as  $produit) {
+  <?php
+  foreach ($ProduitsListView as  $produit) {
 
-echo '<div class="card">';
- echo '<img class="card-img-top"'; echo $produit["jaquettes"]; 'alt="Card image cap" style="width:100%">
-  		<div class="card-body">';
+    echo '<div class="card">';
+    echo '<img class="card-img-top" '.$produit["jaquettes"].' alt="Card image cap" style="width:100%">
+    <div class="card-body">';
 
-echo '<h5 class="card-title">'; echo $produit["Titre"]; '</h5>';
+    echo '<h5 class="card-title"> '.$produit["Titre"].' </h5>';
 
-echo '<table>
-	<tr>
-			<th> Sur </th>
-			<th> Sortie </th>
-			<th> En Stock </th>
-			<th> Prix </th>
-			<th> PEGI </th>
-		</tr>
-		<tr>
+    echo '
 
-			<td> '.$produit["nom_console"].'</td>
-			<td>'.$produit["annee_de_sortie"].'</td>
-			<td>'.$produit["stock"].'</td>
-			<td>'.$produit["prix"].'€</td>
-			<td>'.$produit["age"].'</td>
+    <form method="post" action="./produits">
 
+    <table>
+    <tr>
+    <th> Sur </th>
+    <th> Sortie </th>
+    <th> En Stock </th>
+    <th> Prix </th>
+    <th> PEGI </th>
+    </tr>
+    <tr>
 
-		</tr>
-	 </table>';
- echo    '<a href="#" class="btn btn-primary">Ajouter Au Panier</a>
-  </div>
-</div>';
-
-}
-?>
+    <td> '.$produit["nom_console"].'</td>
+    <td>'.$produit["annee_de_sortie"].'</td>
+    <td>'.$produit["stock"].'</td>
+    <td>'.$produit["prix"].'€</td>
+    <td>'.$produit["age"].'</td>
 
 
+    </tr>
+    </table>';
+    echo    '<input  type= "hidden" name="quantite" value="1">';
+    echo    ' <input name="id_product" type="hidden" value="'.$produit['id'].'">';
+    echo    '<input  type= "submit" class="btn-product btn-primary" value="Ajouter Au Panier">
 
 
-<?php
-require_once "views/footer.php";
-?>
+    </div>
+    </div>
+    </form>';
+
+  }
+  ?>
+
+
+
+
+  <?php
+  require_once "views/footer.php";
+  ?>
 </body>
 
 <?php
-/*
 
-echo "</br>";
-
-echo $produit["nom_console"];
-
-echo "</br>";
-
-echo $produit["id_jeux"];
-echo "</br>";
-
-
-echo $produit["annee_de_sortie"];
-echo "</br>";
-
-echo $produit["stock"];
-echo "</br>";
-
-echo $produit["prix"];
-echo "</br>";
-
-
-echo $produit["id_pegi"];
-echo "</br>";
-
-*/
 
 ?>

@@ -12,7 +12,7 @@ if (isset($_POST['connexion']) && $_POST['connexion'] == 'Connexion') {// isset=
 		$client= $client->getByData($_POST['pseudo']);
 
 		if ($client && password_verify($_POST['mdp'], $client->mdp())){
-
+// password_verify=pour decripter le mdp pour verifier s il correspond au mdp entré par l utilisateur
 			$_SESSION['pseudo'] = $client->pseudo();
 			$_SESSION['mail'] = $client->mail();
 			$_SESSION['id'] = $client->id();
