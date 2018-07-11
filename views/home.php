@@ -14,11 +14,17 @@ require_once "navbar.php"
 
   
 
-    <img class="carouselimg" src="/E-commerce/img/lara.jpg" alt="Image 1" width= "616 px" height="353px" />
-    <img class="carouselimg" src="/E-commerce/img/larac.png" alt="Image 2" width= "616 px" height="353px"/>
-    <img class="carouselimg" src="/E-commerce/img/laracro.jpg" alt="Image 3" width= "616 px" height="353px"/>
-    <img class="carouselimg" src="/E-commerce/img/lara.jpg" alt="Image 4" width= "616 px" height="353px"/>
-    <img class="carouselimg carouselsec" src="/E-commerce/img/larac.png" alt="Image 5" width= "616 px" height="353px"/>
+    <img class="carouselimg" src="/E-commerce/img/jaquettes/pc/pc5.jpg" alt="Image 1" width= "400 px" height="400px" />
+    <img class="carouselimg" src="/E-commerce/img/jaquettes/play/img6.jpg" alt="Image 2" width= "400 px" height="400px"/>
+    <img class="carouselimg" src="/E-commerce/img/jaquettes/switch/swi4.jpg" alt="Image 3" width= "400 px" height="400px"/>
+    <img class="carouselimg" src="/E-commerce/img/jaquettes/xbox/one2.jpg" alt="Image 4" width= "400 px" height="400px"/>
+    <img class="carouselimg" src="/E-commerce/img/jaquettes/play/img7.jpg" alt="Image 5" width= "400 px" height="400px"/>
+    <img class="carouselimg" src="/E-commerce/img/jaquettes/pc/pc2.jpg" alt="Image 5" width= "400 px" height="400px"/>
+    <img class="carouselimg" src="/E-commerce/img/jaquettes/switch/swi9.jpg" alt="Image 5" width= "400 px" height="400px"/>
+    <img class="carouselimg" src="/E-commerce/img/jaquettes/pc/pc6.jpg" alt="Image 5" width= "400 px" height="400px"/>
+    <img class="carouselimg" src="/E-commerce/img/jaquettes/xbox/one1.jpg" alt="Image 5" width= "400 px" height="400px"/>
+    <img class="carouselimg" src="/E-commerce/img/jaquettes/play/img9.jpg" alt="Image 5" width= "400 px" height="400px"/>
+    <img class="carouselimg" src="/E-commerce/img/jaquettes/switch/swi10.jpg" alt="Image 5" width= "400 px" height="400px"/>
 
   </div>
 

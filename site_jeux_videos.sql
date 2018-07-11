@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Hôte : 127.0.0.1:3306
--- Généré le :  Dim 08 juil. 2018 à 12:17
+-- Généré le :  mer. 11 juil. 2018 à 19:29
 -- Version du serveur :  5.7.21
 -- Version de PHP :  5.6.35
 
@@ -36,7 +36,7 @@ CREATE TABLE IF NOT EXISTS `commandes` (
   `date_de_commande` varchar(20) NOT NULL,
   PRIMARY KEY (`id`),
   KEY `id_client_FK` (`id_client`)
-) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 -- --------------------------------------------------------
 
@@ -94,7 +94,7 @@ CREATE TABLE IF NOT EXISTS `panier` (
   PRIMARY KEY (`id`),
   KEY `id_produit_FK` (`id_produit`),
   KEY `id_commande_FK` (`id_commande`)
-) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 -- --------------------------------------------------------
 
@@ -148,43 +148,43 @@ CREATE TABLE IF NOT EXISTS `produits` (
 --
 
 INSERT INTO `produits` (`id`, `Titre`, `id_console`, `id_jeux`, `annee_de_sortie`, `stock`, `prix`, `id_pegi`, `jaquettes`) VALUES
-(1, 'WorldOfWarcraft', 4, 2, 2004, 56, 40, 4, 'src=\"/E-commerce/img/jaquettes/pc/pc1.jpg\"'),
-(2, 'BattlefieldV', 4, 11, 2018, 125, 60, 5, 'src=\"/E-commerce/img/jaquettes/pc/pc2.jpg\"'),
+(1, 'World Of Warcraft', 4, 2, 2004, 56, 40, 4, 'src=\"/E-commerce/img/jaquettes/pc/pc1.jpg\"'),
+(2, 'BattlefieldV ', 4, 11, 2018, 125, 60, 5, 'src=\"/E-commerce/img/jaquettes/pc/pc2.jpg\"'),
 (3, 'Starcraft', 4, 8, 2010, 46, 40, 4, 'src=\"/E-commerce/img/jaquettes/pc/pc3.jpg\"'),
-(4, 'SimCity4', 4, 10, 2003, 10, 25.99, 2, 'src=\"/E-commerce/img/jaquettes/pc/pc4.jpg\"'),
+(4, 'SimCity 4', 4, 10, 2003, 10, 25.99, 2, 'src=\"/E-commerce/img/jaquettes/pc/pc4.jpg\"'),
 (5, 'Overwatch', 4, 11, 2016, 122, 40, 3, 'src=\"/E-commerce/img/jaquettes/pc/pc5.jpg\"'),
-(6, 'NeedForSpeedPayback', 4, 3, 2017, 38, 50, 3, 'src=\"/E-commerce/img/jaquettes/pc/pc6.jpg\"'),
-(7, 'SpellForce3', 4, 8, 2017, 42, 35, 3, 'src=\"/E-commerce/img/jaquettes/pc/pc7.jpg\"'),
-(8, 'FarmersDynasty', 2, 10, 2018, 26, 30, 1, 'src=\"/E-commerce/img/jaquettes/play/img1.jpg\"'),
-(9, 'JurrasicWorldEvolution', 2, 1, 2018, 35, 45, 4, 'src=\"/E-commerce/img/jaquettes/play/img2.jpg\"'),
-(10, 'GodOfWar', 2, 1, 2005, 23, 20, 5, 'src=\"/E-commerce/img/jaquettes/play/img3.jpg\"'),
-(11, 'FarCry3', 2, 11, 2012, 32, 30, 5, 'src=\"/E-commerce/img/jaquettes/play/img4.jpg\"'),
-(12, 'LegoLesIndestructibles', 2, 1, 2018, 85, 60, 1, 'src=\"/E-commerce/img/jaquettes/play/img5.jpg\"'),
-(13, 'Fifa2018', 2, 7, 2017, 85, 50, 1, 'src=\"/E-commerce/img/jaquettes/play/img6.jpg\"'),
-(14, 'TheCrew2', 2, 3, 2018, 93, 55, 3, 'src=\"/E-commerce/img/jaquettes/play/img7.jpg\"'),
-(15, 'LeTourDeFrance2018', 2, 3, 2017, 43, 50, 1, 'src=\"/E-commerce/img/jaquettes/play/img8.jpg\"'),
-(16, 'TheLastOfUs', 2, 4, 2013, 58, 35, 5, 'src=\"/E-commerce/img/jaquettes/play/img9.jpg\"'),
-(17, 'SonicForces', 2, 12, 2017, 64, 40, 2, 'src=\"/E-commerce/img/jaquettes/play/img10.jpg\"'),
-(18, 'PokemonLetsGoPikachu', 3, 2, 2018, 38, 30, 1, 'src=\"/E-commerce/img/jaquettes/switch/swi1.jpg\"'),
-(19, 'MonsterHunterGenerationsUltimate', 3, 2, 2015, 32, 30, 3, 'src=\"/E-commerce/img/jaquettes/switch/swi2.jpg\"'),
-(20, 'TalesOfVesperia', 3, 2, 2018, 39, 35, 3, 'src=\"/E-commerce/img/jaquettes/switch/swi3.jpg\"'),
-(21, 'FragonBallFighterZ', 3, 6, 2018, 58, 35, 3, 'src=\"/E-commerce/img/jaquettes/switch/swi4.jpg\"'),
-(22, 'OctopathTraveler', 3, 2, 2018, 78, 35, 3, 'src=\"/E-commerce/img/jaquettes/switch/swi5.jpg\"'),
-(23, 'SuperSmashBrosUltimate', 3, 6, 2018, 112, 40, 3, 'src=\"/E-commerce/img/jaquettes/switch/swi6.jpg\"'),
-(24, 'BrawlOut', 3, 6, 2017, 48, 30, 2, 'src=\"/E-commerce/img/jaquettes/switch/swi7.jpg\"'),
-(25, 'DeadCells', 3, 1, 2017, 46, 28, 4, 'src=\"/E-commerce/img/jaquettes/switch/swi8.jpg\"'),
-(26, 'TheComaRecut', 3, 1, 2018, 39, 30, 3, 'src=\"/E-commerce/img/jaquettes/switch/swi9.jpg\"'),
-(27, 'DarkSoulsRemastered', 3, 2, 2018, 58, 45, 4, 'src=\"/E-commerce/img/jaquettes/switch/swi10.jpg\"'),
-(28, 'AssassinsCreedOdyssey', 1, 1, 2018, 152, 65, 5, 'src=\"/E-commerce/img/jaquettes/xbox/one1.jpg\"'),
-(29, 'ShadowOfTheTombRaider', 1, 1, 2018, 112, 60, 5, 'src=\"/E-commerce/img/jaquettes/xbox/one2.jpg\"'),
-(30, 'Fallout76', 1, 2, 2018, 98, 55, 5, 'src=\"/E-commerce/img/jaquettes/xbox/one3.jpg\"'),
-(31, 'TheDivision2', 1, 11, 2018, 75, 55, 5, 'src=\"/E-commerce/img/jaquettes/xbox/one4.jpg\"'),
-(32, 'JustCause4', 1, 1, 2018, 95, 60, 5, 'src=\"/E-commerce/img/jaquettes/xbox/one5.jpg\"'),
-(33, 'DivinityOriginSin2', 1, 8, 2017, 56, 50, 5, 'src=\"/E-commerce/img/jaquettes/xbox/one6.jpg\"'),
-(34, 'SpyroReignitedTrilogy', 1, 12, 2018, 54, 45, 2, 'src=\"/E-commerce/img/jaquettes/xbox/one7.jpg\"'),
-(35, 'DevilMayCry5', 1, 4, 2018, 83, 60, 5, 'src=\"/E-commerce/img/jaquettes/xbox/one8.jpg\"'),
-(36, 'ForzaHorizon4', 1, 3, 2018, 81, 60, 1, 'src=\"/E-commerce/img/jaquettes/xbox/one9.jpg\"'),
-(37, 'SoulCalibur6', 1, 6, 2018, 55, 55, 4, 'src=\"/E-commerce/img/jaquettes/xbox/one10.jpg\"');
+(6, 'Need For Speed Payback', 4, 3, 2017, 38, 50, 3, 'src=\"/E-commerce/img/jaquettes/pc/pc6.jpg\"'),
+(7, 'SpellForce 3 ', 4, 8, 2017, 42, 35, 3, 'src=\"/E-commerce/img/jaquettes/pc/pc7.jpg\"'),
+(8, 'Farmer\'s Dynasty ', 2, 10, 2018, 26, 30, 1, 'src=\"/E-commerce/img/jaquettes/play/img1.jpg\"'),
+(9, 'Jurrasic World Evolution', 2, 1, 2018, 35, 45, 4, 'src=\"/E-commerce/img/jaquettes/play/img2.jpg\"'),
+(10, 'God Of War', 2, 1, 2005, 23, 20, 5, 'src=\"/E-commerce/img/jaquettes/play/img3.jpg\"'),
+(11, 'Far Cry 3', 2, 11, 2012, 32, 30, 5, 'src=\"/E-commerce/img/jaquettes/play/img4.jpg\"'),
+(12, 'Lego Les Indestructibles', 2, 1, 2018, 85, 60, 1, 'src=\"/E-commerce/img/jaquettes/play/img5.jpg\"'),
+(13, 'Fifa 2018 ', 2, 7, 2017, 85, 50, 1, 'src=\"/E-commerce/img/jaquettes/play/img6.jpg\"'),
+(14, 'The Crew 2', 2, 3, 2018, 93, 55, 3, 'src=\"/E-commerce/img/jaquettes/play/img7.jpg\"'),
+(15, 'Le Tour De France 2018', 2, 3, 2017, 43, 50, 1, 'src=\"/E-commerce/img/jaquettes/play/img8.jpg\"'),
+(16, 'The Last Of Us', 2, 4, 2013, 58, 35, 5, 'src=\"/E-commerce/img/jaquettes/play/img9.jpg\"'),
+(17, 'Sonic Forces', 2, 12, 2017, 64, 40, 2, 'src=\"/E-commerce/img/jaquettes/play/img10.jpg\"'),
+(18, 'Pokemon Lets Go Pikachu', 3, 2, 2018, 38, 30, 1, 'src=\"/E-commerce/img/jaquettes/switch/swi1.jpg\"'),
+(19, 'Monster Hunter Ultimate', 3, 2, 2015, 32, 30, 3, 'src=\"/E-commerce/img/jaquettes/switch/swi2.jpg\"'),
+(20, 'Tales Of Vesperia', 3, 2, 2018, 39, 35, 3, 'src=\"/E-commerce/img/jaquettes/switch/swi3.jpg\"'),
+(21, 'DragonBall FighterZ', 3, 6, 2018, 58, 35, 3, 'src=\"/E-commerce/img/jaquettes/switch/swi4.jpg\"'),
+(22, 'Octopath Traveler ', 3, 2, 2018, 78, 35, 3, 'src=\"/E-commerce/img/jaquettes/switch/swi5.jpg\"'),
+(23, 'Super Smash Bros Ultimate', 3, 6, 2018, 112, 40, 3, 'src=\"/E-commerce/img/jaquettes/switch/swi6.jpg\"'),
+(24, 'Brawl Out ', 3, 6, 2017, 48, 30, 2, 'src=\"/E-commerce/img/jaquettes/switch/swi7.jpg\"'),
+(25, 'Dead Cells ', 3, 1, 2017, 46, 28, 4, 'src=\"/E-commerce/img/jaquettes/switch/swi8.jpg\"'),
+(26, 'The Coma Recut', 3, 1, 2018, 39, 30, 3, 'src=\"/E-commerce/img/jaquettes/switch/swi9.jpg\"'),
+(27, 'Dark Souls Remastered', 3, 2, 2018, 58, 45, 4, 'src=\"/E-commerce/img/jaquettes/switch/swi10.jpg\"'),
+(28, 'Assassins Creed Odyssey', 1, 1, 2018, 152, 65, 5, 'src=\"/E-commerce/img/jaquettes/xbox/one1.jpg\"'),
+(29, 'Shadow Of The Tomb Raider', 1, 1, 2018, 112, 60, 5, 'src=\"/E-commerce/img/jaquettes/xbox/one2.jpg\"'),
+(30, 'Fallout 76 ', 1, 2, 2018, 98, 55, 5, 'src=\"/E-commerce/img/jaquettes/xbox/one3.jpg\"'),
+(31, 'The Division 2', 1, 11, 2018, 75, 55, 5, 'src=\"/E-commerce/img/jaquettes/xbox/one4.jpg\"'),
+(32, 'Just Cause 4', 1, 1, 2018, 95, 60, 5, 'src=\"/E-commerce/img/jaquettes/xbox/one5.jpg\"'),
+(33, 'Divinity Origin Sin 2', 1, 8, 2017, 56, 50, 5, 'src=\"/E-commerce/img/jaquettes/xbox/one6.jpg\"'),
+(34, 'Spyro Reignited Trilogy', 1, 12, 2018, 54, 45, 2, 'src=\"/E-commerce/img/jaquettes/xbox/one7.jpg\"'),
+(35, 'Devil May Cry 5', 1, 4, 2018, 83, 60, 5, 'src=\"/E-commerce/img/jaquettes/xbox/one8.jpg\"'),
+(36, 'Forza Horizon 4', 1, 3, 2018, 81, 60, 1, 'src=\"/E-commerce/img/jaquettes/xbox/one9.jpg\"'),
+(37, 'Soul Calibur 6', 1, 6, 2018, 55, 55, 4, 'src=\"/E-commerce/img/jaquettes/xbox/one10.jpg\"');
 
 -- --------------------------------------------------------
 
@@ -206,7 +206,7 @@ CREATE TABLE IF NOT EXISTS `profil_client` (
   `mail` varchar(500) NOT NULL,
   `admin` enum('yes','no') DEFAULT 'no',
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=30 DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB AUTO_INCREMENT=34 DEFAULT CHARSET=latin1;
 
 --
 -- Déchargement des données de la table `profil_client`
@@ -218,7 +218,11 @@ INSERT INTO `profil_client` (`id`, `civilite`, `nom`, `prenom`, `date_de_naissan
 (26, 'mme', 'mermaid', 'ariel', '1950-01-01', '40 allÃ©e de la plage bretonne 75006 Atlantis', '0998876532', 'GUIGUI27', '$2y$10$ropgx09ajtzsgAsImV5GoujJfZCDlFtJj47fQYO0WK9b4e6EyXpLy', 'atlantis@gmail.com', 'no'),
 (27, 'mme', 'leclair', 'buzz', '1950-01-01', '300 millions annÃ©es lumieres du php', '0100203040', 'Kivine', '$2y$10$y6XUMTZBjKkmVSy0zuLcUeFrHsoyQtkPzqeWaZgmN1FwbzcUDbHhC', 'espace@italie.it', 'no'),
 (28, 'mme', '', '', '1950-01-01', '', ' ', 'superbrain', '$2y$10$lg6lmKsJD0jqWjVGqB1LlObulvbAiou5Xy7.uhzlFbwlctqrZtA2a', '', 'no'),
-(29, 'mme', 'Le raton', 'Sahara', '1970-01-01', '30 allee du desert 40685 Desertdesable', '0998876569', 'saralerat91', '$2y$10$5OxHlffuymOttpALk/DA8uG4jVlKOGfZoHDlOKx0x5HlbUNtZsQPG', 'alone@tantpis.com', 'no');
+(29, 'mme', 'Le raton', 'Sahara', '1970-01-01', '30 allee du desert 40685 Desertdesable', '0998876569', 'saralerat91', '$2y$10$5OxHlffuymOttpALk/DA8uG4jVlKOGfZoHDlOKx0x5HlbUNtZsQPG', 'alone@tantpis.com', 'no'),
+(30, 'mme', '', '', '1991-03-22', '', ' ', 'Ohara', '$2y$10$SaSmxbn2hcXl4aGJAslmHOuv3igo5XbBZQ1we7uOnfT482i4uKES.', '', 'no'),
+(31, 'mme', '', '', '1991-03-22', '', ' ', 'Ohara', '$2y$10$kKOlF4BukgvA6u3iC9/Atu8PISSFXP/myIkoYkJOnV6mHNXj/CbhO', '', 'no'),
+(32, 'mme', '', '', '1991-03-22', '', ' ', 'fezfzf', '$2y$10$nepu3WeyuZ2tsP1i4IQ1dOCd/Yi9jCgp/fSLR/SwSoonrud47Nn5C', '', 'no'),
+(33, 'mme', '', '', '1991-03-22', '', ' ', 'aa', '$2y$10$4uoBOtuBMEh7JeswgfWtFeBm55GQRo3Z7xezwvgKHciUjfneWef3W', '', 'no');
 
 -- --------------------------------------------------------
 

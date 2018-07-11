@@ -302,7 +302,7 @@ form#panier {
     display: none;
     right: 0;
     margin-top: 50px;
-    max-height: 300px;
+    height: auto;
     min-width: 220px;
     z-index: 900;
     background-color: rgba(242, 242, 242, 0.80);
@@ -349,8 +349,8 @@ form#panier {
 
 .carousel {
     display: flex;
-  	top: 50px;
-    margin-bottom: 100px !important;
+  	top: 65px;
+    margin-bottom: 150px !important;
     margin: 0 auto;
     width:5%;
     height: 300px;
@@ -914,6 +914,11 @@ font-size: 40px;
 
 }
 
+.card-body {
+
+ padding: 0;
+}
+
 #productdisplay table {
   margin: 5px auto;
   width: 100%;
@@ -929,5 +934,5 @@ font-size: 40px;
   letter-spacing: 1px;
   border: none;
   border-radius: 23px;
-  margin-right: 50px;
+  
 }
