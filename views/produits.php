@@ -46,7 +46,7 @@ require_once "views/navbar.php";
 
     </div>
     </div>
-    ';
+    </form>';
 
   }
   ?>

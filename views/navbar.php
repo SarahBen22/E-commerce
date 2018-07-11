@@ -1,5 +1,4 @@
 
-
 <div id="bandeau">
 
 	<img id="logo" src="/E-commerce/img/playerstore6.png">
