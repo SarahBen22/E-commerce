@@ -611,6 +611,7 @@ h5 {
 
 
   width: 10%;
+
 }
 
 .pic{
@@ -913,7 +914,25 @@ font-size: 40px;
 
 }
 
+.card-body {
+
+ padding: 0;
+}
+
 #productdisplay table {
   margin: 5px auto;
   width: 100%;
+}
+
+.btn-product{
+
+  font-size: 16px;
+  width: 163px;
+  height: 48px;
+  cursor: pointer;
+  transition: all .2s ease-in-out;
+  letter-spacing: 1px;
+  border: none;
+  border-radius: 23px;
+  
 }

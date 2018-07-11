@@ -10,7 +10,9 @@ if (true) {// isset= permet de voir si une variable est définie
 
     $client= new profil_clientModel(['id' => $_POST['id'] , 'civilite' =>"mme",'nom' => htmlspecialchars($_POST['nom']),'prenom' =>  htmlspecialchars($_POST['prenom']),'date_de_naissance' => ($date_de_naissance),
     'adresse_postale' =>  htmlspecialchars($_POST['adresse_postale']),'telephone' =>  htmlspecialchars($_POST['telephone']),'pseudo' =>  htmlspecialchars($_POST['pseudo']),'mdp' =>  htmlspecialchars($_POST['mdp']),'mail' =>  htmlspecialchars($_POST['mail']),'admin' => "no"]);
-    //htmlspecialchars= protection des données
+
+    //htmlspecialchars= protection des données =SECURITE
+
     $erreur= $client-> update($client);
 
     if ($erreur==0)

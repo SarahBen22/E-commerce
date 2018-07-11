@@ -45,12 +45,12 @@
 			<a href="/E-commerce/index.php/produits">Produits</a>
 			<ul id="produits">
 				<li><a href="">Par Plateforme</a>
-					<ul class="plateforme">
+
 						<li><a href="#">PC</a></li>
 						<li><a href="#">XBOX ONE</a></li>
 						<li><a href="#">PS4</a></li>
 						<li><a href="#">WII</a></li>
-					</ul>
+
 				</li>
 
 
@@ -87,13 +87,14 @@
 		<li class="panier"  onmouseover="affichage('panier')" onmouseout="affichage('panier')">
 			<dl>
 				<dt>
-					<a  href="about.asp"><img class="basket" src="/E-commerce/img/cart.png" width="35px" height="35px" ></a>
+					<a  href="/E-commerce/index.php/commandes"><img class="basket" src="/E-commerce/img/cart.png" width="35px" height="35px" ></a>
 				</dt>
 
 				<dd>
 					<div class="dropdown" >
 						<div id="cart" >
-							<p><span id="in-cart-items-num"> <?php echo $count; ?> </span> Article(s)</p>
+							<p><span id="in-cart-items-num"> <?php if (isset ($_SESSION ["panier"])){ echo count($_SESSION ["panier"]);}
+							else{ echo 0;}?> </span> Article(s)</p>
 						</div>
 
 
@@ -113,19 +114,7 @@
 		</ul>
 	</div>
 
-
-
-
-
-
-
-
-
-
-
-
-
-	<form id="panier" onmouseover="affichage('panier')" onmouseout="affichage('panier')" action="/E-commerce/index.php/commandes" method="post" enctype="multipart/form-data">
+<form id="panier" onmouseover="affichage('panier')" onmouseout="affichage('panier')" action="/E-commerce/index.php/commandes" method="post" enctype="multipart/form-data">
 
 
 
@@ -138,21 +127,26 @@
 		<th>Article</th>
 		<th>Prix</th>
 		<th>Quantité</th>
+		<th> <a href="./produits?action=emptycart"><img src="/E-commerce/img/trash.png"></a></th>
 		</tr>
 		</thead>
 		<tbody id="cart-tablebody">';
+// le ? = pour integrer des variables avc la méthode GET
+		if(isset($_SESSION["panier"])){
 
 
-		foreach ($PanierListView as  $pan){
+			foreach ($_SESSION["panier"] as  $pan){
 
-		$montant= ($pan["prix"] * $pan["quantite"]) + $montant;
-			echo'
+				$montant= ($pan["prix"] * $pan["quantite"]) + $montant;
+				echo'
 
-			<tr>
-			<td>'.$pan["Titre"].'</td>
-			<td>'.$pan["prix"].'</td>
-			<td>'.$pan["quantite"].'</td>
-			</tr>';
+				<tr>
+				<td>'.$pan["titre"].'</td>
+				<td>'.$pan["prix"].'€ </td>
+				<td>'.$pan["quantite"].'</td>
+				<td> <a href= "./produits?remove_id='.$pan['id'].'"> X </a></td>
+				</tr>';
+			}
 		}
 		echo '</tbody>
 
