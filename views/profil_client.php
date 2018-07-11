@@ -3,13 +3,16 @@ require_once "views/navbar.php";
 require_once "views/layout.php";
 ?>
 
+
+<div class="form-container">
+
 <form class="forme" action="./profil_client" method="POST">
 
 
 
   <h1>Profil Client :</h1>
   <label for="mme" class="inline">Mme</label>
-  <input type="radio" name="civilite" value="mme" id="mme" /><input type="radio" name="CSS" value="mr" id="mr" />
+  <input class="civilite "type="radio" name="civilite" value="mme" id="mme" /><input class="civilite" type="radio" name="CSS" value="mr" id="mr" />
   <label for="mr" class="inline">M.</label><br />
   <h5>Nom</h5> <input type="text" name="nom" value="<?php if (isset($_SESSION['nom'])) echo htmlentities(trim($_SESSION['nom'])); ?>"><br />
 
@@ -31,4 +34,10 @@ require_once "views/layout.php";
 </form>
 <?php
 if (isset($erreur)) echo '<br />',$erreur;//
+?>
+
+</div>
+
+<?php
+require_once "footer.php";
 ?>
