@@ -10,7 +10,7 @@ require_once "views/navbar.php";
   foreach ($ProduitsListView as  $produit) {
 
 
-    echo '<div class="cards">';
+    echo '<div class="card cards">';
     echo '<img class="card-img-top" '.$produit["jaquettes"].' alt="Card image cap" style="width:100%">
     <div class="card-body">';
 
