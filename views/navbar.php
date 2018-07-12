@@ -43,17 +43,17 @@
 		<li>
 			<a href="/E-commerce/index.php/produits">Produits</a>
 			<ul id="produits">
-				<li><a href="">Par Plateforme</a>
-
+				<li><a href="/E-commerce/index.php/produits">Par Plateforme</a>
+					<ul class="plateforme">
 						<li><a href="#">PC</a></li>
 						<li><a href="#">XBOX ONE</a></li>
 						<li><a href="#">PS4</a></li>
 						<li><a href="#">WII</a></li>
-
+					</ul>
 				</li>
 
 
-				<li><a href="">Par Genre</a>
+				<li><a href="/E-commerce/index.php/produits">Par Genre</a>
 
 					<ul class="genre">
 						<li><a href="#">AVENTURE</a></li>

@@ -54,12 +54,8 @@ require_once "views/navbar.php";
 
 
 
+
+</body>
   <?php
   require_once "views/footer.php";
   ?>
-</body>
-
-<?php
-
-
-?>
