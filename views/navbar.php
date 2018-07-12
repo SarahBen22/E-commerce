@@ -14,7 +14,7 @@
 	?>
 
 	<?php
-	if ($_SESSION){
+	if ((isset($_SESSION['pseudo']) && $_SESSION['pseudo']) || (isset($_SESSION['mail']) && $_SESSION['mail'])){
 		echo	'<a class="deconnexion" href="/E-commerce/index.php/deconnexion">Deconnexion</a>';
 	}
 	else{
@@ -24,7 +24,7 @@
 
 	<?php
 
-	if ($_SESSION){
+	if ((isset($_SESSION['pseudo']) && $_SESSION['pseudo']) || (isset($_SESSION['mail']) && $_SESSION['mail'])){
 		echo	'<a class="commandes" href="/E-commerce/index.php/commandes">Commandes</a>';
 	}
 	?>
