@@ -4,7 +4,7 @@
 	<img id="logo" src="/E-commerce/img/playerstore6.png">
 
 	<?php
-	if ($_SESSION){
+	if ((isset($_SESSION['pseudo']) && $_SESSION['pseudo']) || (isset($_SESSION['mail']) && $_SESSION['mail'])){
 		echo	'<a class="moncompte" href="/E-commerce/index.php/profil_client">Mon Compte</a>';
 	}
 	?>
