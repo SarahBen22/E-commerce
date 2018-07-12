@@ -500,12 +500,12 @@ li.col-sm {
   margin-top: 50px;
   position: relative;
   width: 100%;
-  
+
   background: linear-gradient( #000000 , #202960 50% , #000000 100% );
   box-sizing: content-box;
   padding-top: 50px;
   padding-bottom: 50px;
- 
+
 }
 
 
@@ -515,13 +515,13 @@ input.civilite  {
 }
 
 input#date {
-  background-color: white; 
+  background-color: white;
 }
 
 .forme {
-  
+
   text-align: center;
- 
+
   width: 40%;
   margin: auto;
   background-color: rgba(242, 242, 242, 0.80);
@@ -934,5 +934,10 @@ font-size: 40px;
   letter-spacing: 1px;
   border: none;
   border-radius: 23px;
-  
+
+}
+
+.total{
+  border: 0px !important;
+  height: 80px;
 }

@@ -12,7 +12,7 @@ require_once "navbar.php"
 
   <div class="carousel">
 
-  
+
 
     <img class="carouselimg" src="/E-commerce/img/jaquettes/pc/pc5.jpg" alt="Image 1" width= "400 px" height="400px" />
     <img class="carouselimg" src="/E-commerce/img/jaquettes/play/img6.jpg" alt="Image 2" width= "400 px" height="400px"/>
@@ -42,22 +42,22 @@ require_once "navbar.php"
 
       <div class="row">
 
-   
-    
 
 
-        <li class="col-sm"> <dl> <dt><a href=""><img src="/E-commerce/img/ps4.jpg"  width= "150px"
+
+        <!-- Liens vers les différentes catégories de console -->
+        <li class="col-sm"> <dl> <dt><a href="/E-commerce/index.php/produits?console=playstation"><img src="/E-commerce/img/ps4.jpg"  width= "150px"
         height= "150px"> </a> </dt><dd> PS4</dd>   </dl></li>
 
 
-        <li class="col-sm"> <dl> <dt><a href=""><img src="/E-commerce/img/xbox.jpg"  width= "150px"
+        <li class="col-sm"> <dl> <dt><a href="/E-commerce/index.php/produits?console=xbox"><img src="/E-commerce/img/xbox.jpg"  width= "150px"
         height= "150px"></a> </dt><dd>  XBOX ONE</dd>  </dl> </li>
 
-        <li class="col-sm"> <dl> <dt><a href=""><img src="/E-commerce/img/pc.jpg"  width= "150px"
+        <li class="col-sm"> <dl> <dt><a href="/E-commerce/index.php/produits?console=pc"><img src="/E-commerce/img/pc.jpg"  width= "150px"
         height= "150px"></a> </dt><dd> PC</dd>  </dl> </li>
 
 
-        <li class="col-sm"> <dl> <dt><a href=""><img src="/E-commerce/img/nintendo.jpg"  width= "150px"
+        <li class="col-sm"> <dl> <dt><a href="/E-commerce/index.php/produits?console=switch"><img src="/E-commerce/img/nintendo.jpg"  width= "150px"
         height= "150px"></a> </dt><dd>  SWITCH</dd>  </dl> </li>
 
 

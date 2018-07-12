@@ -44,11 +44,11 @@
 			<a href="/E-commerce/index.php/produits">Produits</a>
 			<ul id="produits">
 				<li><a href="">Par Plateforme</a>
-
-						<li><a href="#">PC</a></li>
-						<li><a href="#">XBOX ONE</a></li>
-						<li><a href="#">PS4</a></li>
-						<li><a href="#">WII</a></li>
+						<!-- Liens vers les différentes catégories de console -->
+						<li><a href="/E-commerce/index.php/produits?console=pc">PC</a></li>
+						<li><a href="/E-commerce/index.php/produits?console=xbox">XBOX ONE</a></li>
+						<li><a href="/E-commerce/index.php/produits?console=playstation">PS4</a></li>
+						<li><a href="/E-commerce/index.php/produits?console=switch">SWITCH</a></li>
 
 				</li>
 

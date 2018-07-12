@@ -57,7 +57,25 @@ class ProduitsModel extends Model {
 		return $produitsList;
 	}
 
+	// Fonction qui récupère la liste des produits en fonction de la console
+	public function getByConsole ($console){
+		$db=parent::connect();
 
+		// je veux tous les produits qui sont sur une console en particulier
+		$sql = "select produits.*, consoles.nom_console, pegi.age from produits
+		LEFT JOIN consoles on produits.id_console= consoles.id
+		LEFT JOIN pegi on produits.id_pegi= pegi.id
+		WHERE consoles.nom_console= :console";
+
+	// les left join représentent les clés étrangères ds la BDD (ils réunissent les infos entre les tables)
+		$query = $db -> prepare($sql);
+		$query->bindValue(':console', $console);
+		$query -> execute();
+		$produitsList= $query -> fetchAll();
+
+
+		return $produitsList;
+	}
 
 	public function get($data){
 
@@ -152,9 +170,7 @@ class ProduitsModel extends Model {
 		}
 
 		public function setPrix( $prix ){
-			if(is_int($prix)){
 				$this->prix  = $prix ;
-			}
 	}
 
 
@@ -183,7 +199,7 @@ class ProduitsModel extends Model {
 					return '<p class="red">Le produit n\'a pas été enregistré correctement.</p>';
 				}
 
-				$sql= "UPDATE prod SET titre = :titre, id_console = :id_console, id_jeux = :id_jeux, annee_de_sortie = :annee_de_sortie , stock = :stock, id_pegi = :id_pegi WHERE id=".$prod->id();
+				$sql= "UPDATE prod SET titre = :titre, id_console = :id_console, id_jeux = :id_jeux, annee_de_sortie = :annee_de_sortie , stock = :stock, prix = :prix, id_pegi = :id_pegi WHERE id=".$prod->id();
 				$query= $db -> prepare ($sql);
 				$query->bindValue(':titre', $prod->titre());
 				$query->bindValue(':id_console', $prod->id_console());
