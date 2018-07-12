@@ -53,7 +53,7 @@
 				</li>
 
 
-				<li><a href="">Par Genre</a>
+				<li><a href="/E-commerce/index.php/produits">Par Genre</a>
 
 					<ul class="genre">
 						<li><a href="#">AVENTURE</a></li>
